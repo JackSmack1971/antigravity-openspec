@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_TOKEN": "${GITHUB_TOKEN}" },
+      "trust": "read-only",
+      "justification": "PR creation, branch management, issue tracking. Write ops require /guard confirmation."
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"],
+      "trust": "read-only",
+      "justification": "Default read-only workspace access. Write ops require explicit /guard wrapper."
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"],
+      "trust": "read-only",
+      "justification": "Up-to-date library documentation lookup. Pure read — no mutation capability."
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "trust": "read-only",
+      "justification": "Complex multi-step reasoning chains for ce-plan and systematic-debugging. Pure cognition."
+    }
+  },
+  "security": {
+    "model_armor": true,
+    "strict_mode": true,
+    "iam_deny_defaults": ["delete-*", "push-force", "schema-drop", "env-*", "key-*"],
+    "turbo_justification_required": true,
+    "prompt_injection_defense": true,
+    "browser_separate_profile": true,
+    "localhost_only_http": true
+  },
+  "quota": {
+    "model_credit_overages": "ask",
+    "refresh_cycle_hours": 5
+  }
+}
