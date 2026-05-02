@@ -19,3 +19,4 @@ Overflow: extract to @filename reference pattern. Never truncate; always externa
 
 ## Tool Bloat Prevention
 NEVER load >3 full skill payloads simultaneously unless explicit //parallel justification.
+Context Budget Analytics in `/logs` must be actively monitored. Any request exceeding 3 concurrent full-payload skills causes Tool Bloat regression and defeats JIT efficiency. If violated, audit AGENTS.md routing logic immediately.

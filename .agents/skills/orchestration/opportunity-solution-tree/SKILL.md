@@ -41,3 +41,4 @@ allowed-tools: Read, Write
 ## Quality Gates
 - [ ] Single measurable outcome with metric defined
 - [ ] ≥ 3 solutions documented per prioritized opportunity with experiments
+- [ ] Process adheres to L0 Foundational Rules (GOAL-DRIVEN)

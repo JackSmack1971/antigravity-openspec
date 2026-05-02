@@ -22,3 +22,6 @@ Apply n-gram abbreviations for repeated domain terms (e.g., SDD for Spec-Driven 
 3. **Density**: Is it telegraphic?
 
 Every terminal workflow MUST chain to `/retro` for KI extraction.
+
+## KI Conflict Mitigation
+To prevent context rot and KI conflicts, enforce a bi-weekly `/para-knowledge` audit. Any updates to existing KIs must trigger a `ki-curator` SemVer bump. This is a calendar-triggered Rule.

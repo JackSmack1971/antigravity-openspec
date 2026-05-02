@@ -45,3 +45,4 @@ Output: .semgrep.yml (or equivalent) + CI/CD pipeline snippet.
 - [ ] All 6 STRIDE categories documented in ThreatModel.md
 - [ ] MitigationPlan coverage score ≥ 0.8
 - [ ] SAST config committed to repo with CI/CD integration
+- [ ] Adheres to L0 Foundational Rules (SURGICAL EDITS, SIMPLICITY FIRST)

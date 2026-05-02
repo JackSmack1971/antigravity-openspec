@@ -43,3 +43,5 @@ Run check-complete.py → if milestone complete → prompt /retro.
 ## Quality Gates
 - [ ] task_plan.md created before any significant action
 - [ ] progress.md updated every 2 tool operations
+- [ ] Adheres strictly to L0 Foundational Rules (THINK BEFORE CODING)
+

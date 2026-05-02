@@ -1,7 +1,7 @@
 ---
 title: Antigravity Master Router (APEX)
-version: 2026-04
-description: Single entry point. Loads Rules. Registers Workflows. Enables progressive Skill discovery. 6-Layer Architecture & 5 Power-Chain orchestration.
+version: 2026-05-path-hardened-v3
+description: Single entry point. Loads Rules. Registers Workflows. Hardened for Path (Trust Anchor) & Context Resilience (Proactive Consolidation).
 ---
 
 # APEX — Autonomous Production Engineering eXcellence
@@ -13,7 +13,29 @@ description: Single entry point. Loads Rules. Registers Workflows. Enables progr
 @.agents/rules/03-security-baseline.md
 @.agents/rules/04-progressive-disclosure.md
 @.agents/rules/05-ki-governance.md
+@.agents/rules/06-terminal-execution.md
+@.agents/rules/07-visual-verification.md
+@.agents/rules/08-windows-host-bridge.md
+@.agents/rules/09-self-improvement-uplift.md
+@.agents/rules/10-context-budget-governance.md
+@.agents/rules/11-path-governance.md
+@.agents/rules/12-context-resilience.md
+*L0 Foundational Rules (Karpathy Mandates) are natively embedded in 00-constitution.md.*
 
+
+### Conflict Resolution Precedence
+1. **03-security-baseline.md** (Highest)
+2. **00-constitution.md**
+3. **Other .agents/rules/*.md files**
+4. **.agents/skills/** (Skill-level logic)
+5. **.agents/workflows/** (Trajectory-level logic)
+
+*Conflict Handling:* Contradictions between rules on the same tier automatically escalate to **STRICT_MODE**. Monitor **Context Budget Analytics** via `/logs`; if context exceeds 100k tokens, audit rule nesting depth.
+
+*Note on Extensibility Triad:* 
+- **Rules** = Constitutional physics (always-on constraints). 
+- **Workflows** = Trajectory programs (slash-invokable sequences). 
+- **Skills** = Progressive-disclosure vocabulary (on-demand competencies).
 ---
 
 ## 5 POWER-CHAINS (Governance Triads)
@@ -24,6 +46,7 @@ description: Single entry point. Loads Rules. Registers Workflows. Enables progr
 | **C: Debug** | Bug Report | Iron Law | /ce-debug → /systematic-debugging |
 | **D: PM Discovery** | Decision Needed | Torres OST | /discover → /opsx:propose |
 | **E: Skill Authoring**| Gap Detected | CSO, <500w | /writing-skills (RED → GREEN → REFACT) |
+| **F: Context Resilience**| High Density | 10, 11 | /para-knowledge → /ce-compound |
 
 ---
 
@@ -57,13 +80,16 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 UserPromptSubmit → inject task_plan.md header (head -50) + recent progress.md (tail -20)
 PreToolUse       → prepend active plan phase snippet from task_plan.md
 PostToolUse      → remind: "Update progress.md — 2-action rule. Action count: [N]"
-Stop             → run check-complete.py; prompt /retro if milestone complete
+Stop             → run crystallization-tracker.py; run check-complete.py; prompt /retro
 
 ---
 
 ## SELF-IMPROVEMENT TERMINUS
 Every /ship, /ce-compound, /opsx:archive MUST chain → /retro → KNOWLEDGE SUBAGENT extraction.
 Missing /retro = INCOMPLETE WORKFLOW. Rule 05 enforces termination.
+- **30-Day Crystallization Alert**: `/retro` loop MUST track a 30-day crystallization period (v2026-05 ends 2026-06-01).
+- **Bi-Weekly KI Audit**: Execute a calendar-triggered `/para-knowledge` audit every two weeks to prevent KI conflicts and context rot.
+- **Knowledge Core Audit**: Ensure extraction is aligned with modular KIs in `.agents/knowledge/`.
 
 ---
 
@@ -78,5 +104,5 @@ SELF-AWARENESS DIRECTIVE:
 - Use Git for .agents/ versioning.
 
 KNOWLEDGE BASE DIRECTIVE:
-- Synthesize content from .agents/knowledge/ during any self-reflection.
+- Synthesize content from `.agents/knowledge/` and `.agents/knowledge/playbooks/` during any self-reflection.
 - Treat knowledge files as live, authoritative state.

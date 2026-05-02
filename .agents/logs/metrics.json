@@ -1,0 +1,18 @@
+{
+    "history": [
+        {
+            "timestamp": "2026-05-02T13:23:15.891519",
+            "wins": 10,
+            "interventions": 2,
+            "uplift": 83.33333333333334
+        },
+        {
+            "timestamp": "2026-05-02T13:39:08.202163",
+            "wins": 1,
+            "interventions": 0,
+            "uplift": 100.0
+        }
+    ],
+    "total_interventions": 2,
+    "total_wins": 11
+}

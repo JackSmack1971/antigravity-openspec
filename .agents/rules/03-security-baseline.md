@@ -17,7 +17,7 @@ CI block: if sast-config not present in PR → auto-block merge.
 
 ## Zero Unilateral Destructive Ops
 delete, push-force, schema-drop, env-mutation → ALWAYS /guard → user confirmation.
-No exceptions. Any bypass = P0 incident.
+No exceptions. The `/ship` dependency on `/guard` CANNOT be rationalized away under any circumstances (including time pressure). Any bypass = P0 incident. All high-risk globs (**/*.sh, **/*.sql, **/*.env) strictly enforce this requirement.
 
 ## GitIgnore Guards
 NEVER commit: .env files, secrets, API keys, auth tokens, private keys, worktree dirs (.worktrees/).

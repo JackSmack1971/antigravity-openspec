@@ -35,10 +35,16 @@ quality_score < threshold → DISCARD. Do not write low-quality KI to store.
 ## Step 5: Write Approved KI Artifacts
 Write to: `.agents/knowledge/{type}/{domain}_{timestamp}.md`
 Existing KI updated: SemVer bump (patch for minor, minor for structural).
-Use pitfall template for Pitfalls (Symptom → Root Cause → Fix → Prevention Rule).
+**Mandate**: Use the `.agents/knowledge/playbooks/pitfall_extraction.md` template for all Pitfall KIs.
 
-## Step 6: Report
-Output: "KI extracted: [title] | Type: [Pitfall/Playbook/Context] | Domain: [X] | Trace: [6-char-id]"
+## Step 6: 30-Day Crystallization & Metrics Dashboard
+1. Track `manual_interventions` vs `autonomous_wins` in the current session.
+2. Calculate Session `Uplift%` per Rule 09.2.
+3. **Dashboard Generation**: The agent MUST generate the "Autonomy Uplift Dashboard" for the `walkthrough.md` during this step.
+4. If `Uplift%` < 40%, flag a "Quality Score Alert" for immediate KI audit.
+
+## Step 7: Report
+Output: "KI extracted: [title] | Type: [Pitfall/Playbook/Context] | Domain: [X] | Trace: [6-char-id] | Uplift: [X%]"
 
 ## Success Criteria
 ≥ 1 KI artifact passes quality gate and is written to .agents/knowledge/.

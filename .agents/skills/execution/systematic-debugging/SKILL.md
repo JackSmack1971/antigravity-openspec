@@ -46,3 +46,4 @@ Replace ALL sleep(N) with waitFor(condition) polling loops (eliminates test flak
 - [ ] Root cause documented in findings.md BEFORE any code change
 - [ ] Single falsifiable hypothesis formed and tested before fix
 - [ ] Failing test written BEFORE fix applied
+- [ ] Fix adheres to L0 Foundational Rules (SURGICAL EDITS, ROOT-CAUSE FIRST)

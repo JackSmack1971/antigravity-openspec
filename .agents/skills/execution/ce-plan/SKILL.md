@@ -42,3 +42,4 @@ Handoff: "Plan ready. Confidence: [N]%. Initiating /using-git-worktrees."
 - [ ] All file refs are repo-relative (never absolute)
 - [ ] Every implementation unit has acceptance criteria
 - [ ] Confidence ≥ 70 before handoff to @apex-engineer
+- [ ] Plan enforces L0 Foundational Rules (THINK BEFORE CODING, SIMPLICITY FIRST)

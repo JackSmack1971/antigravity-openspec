@@ -11,6 +11,7 @@ allowed-tools: Read, Write, Edit, Bash
 Writing skills IS Test-Driven Development applied to process documentation.
 Test cases = pressure scenarios. Failing tests = baseline agent failures.
 Green = skill achieves 100% compliance. Refactor = close loopholes.
+Must strictly enforce L0 Foundational Rules (THINK BEFORE CODING, SURGICAL EDITS, SIMPLICITY FIRST, GOAL-DRIVEN).
 
 ## TDD Workflow
 
@@ -23,7 +24,7 @@ Green = skill achieves 100% compliance. Refactor = close loopholes.
 ### GREEN Phase (Write Skill)
 5. Write MINIMAL SKILL.md addressing ONLY the documented failures.
 6. Re-run identical pressure scenarios WITH new skill.
-7. Verify: 100% compliance required. Any failure → return to step 5.
+7. Verify: 100% compliance required. Ensure skill forces agent to adhere to L0 Foundational Rules. Any failure → return to step 5.
 
 ### REFACTOR Phase (Harden)
 8. Identify new loopholes exposed in GREEN phase. Plug. Re-verify.
@@ -44,3 +45,4 @@ version: semver string.
 - [ ] GREEN phase verified with 100% compliance
 - [ ] REFACTOR executed at least once
 - [ ] description starts "Use when..." with zero process summary
+- [ ] Skill explicitly ensures L0 Foundational Rules compliance

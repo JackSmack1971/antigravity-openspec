@@ -45,3 +45,4 @@ Execute via @apex-engineer. TDD. Incremental. 2-action rule active.
 ## Quality Gates
 - [ ] SPEC.md exists and human-approved before any code written
 - [ ] All 6 sections present with verifiable criteria
+- [ ] Specification enforces L0 Foundational Rules (THINK BEFORE CODING, GOAL-DRIVEN)

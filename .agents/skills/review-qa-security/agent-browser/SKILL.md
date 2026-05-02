@@ -45,3 +45,5 @@ Load for non-web tasks: `agent-browser skills get electron|slack|vercel-sandbox`
 ## Quality Gates
 - [ ] Chrome installed: agent-browser install (first time)
 - [ ] Re-snapshot after every page state change before next interaction
+- [ ] ALWAYS generate a visual screenshot or recording artifact upon task completion (per .agents/rules/07-visual-verification.md).
+- [ ] Execution adheres to L0 Foundational Rules (SIMPLICITY FIRST, SURGICAL EDITS)

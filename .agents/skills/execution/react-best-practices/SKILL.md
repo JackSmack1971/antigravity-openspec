@@ -46,3 +46,4 @@ Before any ship: pnpm build → must exit 0 with zero warnings.
 - [ ] No sequential awaits for independent operations (Promise.all used)
 - [ ] No barrel imports in critical render paths
 - [ ] pnpm build exits 0, zero warnings
+- [ ] Code adheres to L0 Foundational Rules (SIMPLICITY FIRST, SURGICAL EDITS)

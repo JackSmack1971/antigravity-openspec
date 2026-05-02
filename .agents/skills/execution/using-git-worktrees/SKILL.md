@@ -48,3 +48,4 @@ NEVER proceed with failing tests without explicit user permission.
 ## Quality Gates
 - [ ] .worktrees/ (or worktrees/) is gitignored and committed
 - [ ] Baseline tests pass (or user explicitly confirmed failing baseline acceptable)
+- [ ] Adheres to L0 Foundational Rules (SURGICAL EDITS)
