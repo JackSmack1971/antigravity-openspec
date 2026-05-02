@@ -1,5 +1,14 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - OpenSpec Workflows Update (v2026-05-openspec-workflows)
+### Added
+- Created `.agents/workflows/openspec/opsx-core-quick-path.md` — Core Quick Path workflow: propose → apply → sync → archive.
+- Created `.agents/workflows/openspec/opsx-expanded-path.md` — Expanded Path workflow: new → continue/ff → apply → verify → archive/bulk-archive.
+- Created `.agents/workflows/openspec/opsx-explore.md` — `/opsx:explore` workflow: Non-structured thinking partner transitioning to proposal artifacts.
+
+### Changed
+- Upgraded `.agents/workflows/openspec/opsx-propose.md` — `/opsx:propose`: Formalized the 4-step AI generation sequence based on schema dependencies.
+
 ## [2026-05-02] - Meta Skill Workflows Update (v2026-05-meta-workflows)
 ### Added
 - Created `.agents/workflows/meta/skill-authoring-template.md` — `/skill-authoring-template` workflow: Enforces a progressive disclosure format for SKILL.md creation.
