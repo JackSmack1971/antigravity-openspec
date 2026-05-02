@@ -5,6 +5,7 @@
 - Created `.agents/workflows/engineering/ce-strategy.md` — `/ce-strategy` workflow: Upstream anchor for STRATEGY.md initialization.
 - Created `.agents/workflows/engineering/ce-brainstorm.md` — `/ce-brainstorm` workflow: Requirements brainstorming phase.
 - Created `.agents/workflows/engineering/ce-work.md` — `/ce-work` workflow: Execution and implementation phase.
+- Created `.agents/workflows/engineering/using-git-worktrees.md` — `/using-git-worktrees` workflow: 8-step deterministic clean workspace guarantee.
 
 ### Changed
 - Upgraded `.agents/workflows/engineering/ce-plan.md` — `/ce-plan`: Detailed the 6 iterative phases explicitly (Phase 0 to Phase 5).
