@@ -64,6 +64,8 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 /review          → .agents/workflows/sprint/review.md
 /ship            → .agents/workflows/sprint/ship.md
 /retro           → .agents/workflows/sprint/retro.md
+/sprint          → .agents/workflows/sprint/sprint.md
+/skill-routing   → .agents/workflows/sprint/skill-routing.md
 /ce-plan         → .agents/workflows/engineering/ce-plan.md
 /ce-debug        → .agents/workflows/engineering/ce-debug.md
 /ce-code-review  → .agents/workflows/engineering/ce-code-review.md
@@ -83,7 +85,7 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 ---
 
 ## LIFECYCLE HOOKS
-UserPromptSubmit → inject task_plan.md header (head -50) + recent progress.md (tail -20)
+UserPromptSubmit → /skill-routing (intent parse + role dispatch) → inject task_plan.md header (head -50) + recent progress.md (tail -20)
 PreToolUse       → prepend active plan phase snippet from task_plan.md
 PostToolUse      → remind: "Update progress.md — 2-action rule. Action count: [N]"
 Stop             → run crystallization-tracker.py; run check-complete.py; prompt /retro

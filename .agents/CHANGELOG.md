@@ -1,7 +1,19 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Gstack Sprint Workflow Suite (v2026-05-gstack-sprint-v1)
+### Added
+- Created `.agents/workflows/sprint/sprint.md` — `/sprint` workflow: canonical Think-Plan-Build-Review-Test-Ship-Reflect sprint lifecycle; phase map with `/office-hours → /plan-ceo-review → /spec → build → /review → /qa → /ship → /retro`; guardrail interrupt table (`/freeze`, `/guard`, 3-Strike). (Workflows Refs §1, Workflow 4)
+- Created `.agents/workflows/sprint/skill-routing.md` — `/skill-routing` workflow: session-init request-type dispatcher; 15-row intent→role→workflow routing table; Power-Chain routing diagram (Chains A–G); anti-rationalization guardrail table. (Workflows Refs §1, Workflow 5)
+
+### Changed (upgraded stubs to full gstack spec)
+- Upgraded `.agents/workflows/sprint/autoplan.md` — `/autoplan`: expanded stub (9 lines) to full gstack sprint pipeline; added CEO review, design review, eng review, DX review phases; 4 User Sovereignty Checkpoints; guardrail interrupt section. (Workflows Refs §1, Workflow 1)
+- Upgraded `.agents/workflows/sprint/review.md` — `/review`: expanded stub (5 lines) to full PR review + fix loop; 7-step sequence (detect→diff→slop→critical→parallel-dispatch→fix-first→verify); `/browse` skill dependency; parallel 3-agent specialist dispatch with confidence gating. (Workflows Refs §1, Workflow 2)
+- Upgraded `.agents/workflows/sprint/ship.md` — `/ship`: expanded stub (5 lines) to full release workflow; strict `/guard` dependency; `/land-and-deploy` and `/canary` integration; stale review detection; mandatory `/retro` terminus. (Workflows Refs §1, Workflow 3)
+- Updated `AGENTS.md` lifecycle hook: `UserPromptSubmit` now chains `/skill-routing` before plan injection; registered `/sprint` and `/skill-routing` in REGISTERED WORKFLOWS.
+
 ## [2026-05-02] - Browser Automation Workflow Suite (v2026-05-browser-workflows-v1)
 ### Added
+
 - Created `.agents/workflows/browser/core-loop.md` — `/core-loop` workflow: CDP referential DOM validation via snapshot-and-ref loop. Enforces mandatory re-snapshot after every page state change. (Audit Report §2, Workflow 1)
 - Created `.agents/workflows/browser/quickstart-batch.md` — `/quickstart-batch` workflow: Multi-command serialization via `agent-browser batch`; supports inline string args and JSON stdin with `--bail` fail-fast mode. (Audit Report §2, Workflow 2)
 - Created `.agents/workflows/browser/login.md` — `/login` workflow: Auth vault credential orchestration isolating PII from shell history; chains `auth save → open → auth login → wait --url → snapshot -i`. (Audit Report §2, Workflow 3)
