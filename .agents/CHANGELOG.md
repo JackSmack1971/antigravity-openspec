@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Meta Skill Workflows Update (v2026-05-meta-workflows)
+### Added
+- Created `.agents/workflows/meta/skill-authoring-template.md` — `/skill-authoring-template` workflow: Enforces a progressive disclosure format for SKILL.md creation.
+- Created `.agents/workflows/meta/pressure-testing.md` — `/pressure-testing` workflow: Subagent-driven development for pressure testing SKILL.md compliance.
+
+### Changed
+- Upgraded `.agents/workflows/meta/writing-skills.md` — `/writing-skills`: Streamlined the TDD skill authoring sequence into a mandatory 6-step loop.
+
 ## [2026-05-02] - Compound Engineering Workflows Update (v2026-05-ce-workflows)
 ### Added
 - Created `.agents/workflows/engineering/ce-strategy.md` — `/ce-strategy` workflow: Upstream anchor for STRATEGY.md initialization.
