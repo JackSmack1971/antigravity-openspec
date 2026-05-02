@@ -11,6 +11,7 @@
 - Created `.agents/skills/execution/ce-plan/examples/golden-plan.md` to provide a few-shot semantic scaffold.
 - Created `.agents/skills/execution/ce-plan/resources/plan-template.md` as the reusable markdown baseline.
 - Updated `plan-template.md` with detailed scaffolding (Status/CS tracking, formal IU definitions, table structures for Dependencies and Risks, and distinct plan-level vs IU-level Acceptance Criteria).
+- Updated `golden-plan.md` with a high-fidelity "Rate-Limiting Auth API" scenario, demonstrating proper IU abstraction, table formatting, and gap justification for CS < 100%.
 
 ## [2026-05-02] - Systematic Debugging Workflows Update (v2026-05-debug-workflows)
 ### Added
