@@ -1,5 +1,16 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - ce-plan Level 4 Upgrade (v2026-05-ce-plan-l4)
+### Changed
+- Upgraded `.agents/skills/execution/ce-plan/SKILL.md` from Level 2 to Level 4: Added telegraphic phases, positive framing, and n-gram abbreviations (IU, AC, CS, DP).
+- Replaced the prose-based Phase 5 confidence gate with a deterministic black-box Python script (`scripts/validate-plan.py`).
+- Appended a `<ki_extraction>` block to enforce the `/retro` loop and continuous self-improvement.
+
+### Added
+- Created `.agents/skills/execution/ce-plan/scripts/validate-plan.py` for deterministic plan validation.
+- Created `.agents/skills/execution/ce-plan/examples/golden-plan.md` to provide a few-shot semantic scaffold.
+- Created `.agents/skills/execution/ce-plan/resources/plan-template.md` as the reusable markdown baseline.
+
 ## [2026-05-02] - Systematic Debugging Workflows Update (v2026-05-debug-workflows)
 ### Added
 - Created `.agents/workflows/engineering/backward-root-cause-tracing.md` — Backward Root-Cause Tracing sequence: Deterministic data flow extraction integrating with find-polluter.sh.
