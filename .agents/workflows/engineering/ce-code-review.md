@@ -1,6 +1,6 @@
 ---
 name: ce-code-review
-description: 3-persona tiered code review with confidence gating. Blocks ship if any persona fails. Slash command: /ce-code-review
+description: 3-persona tiered code review with confidence gating. Blocks ship if any persona fails. Handoff to /ce-compound or /ce-polish-beta. Slash command: /ce-code-review
 ---
 # /ce-code-review — 3-Persona Tiered Review
 
@@ -26,7 +26,7 @@ Each returns: `{reviewer, verdict: PASS|FAIL|WARN, confidence: 0-100, findings: 
 
 ## Step 2: Confidence Gate Gate: STRICT_MODE
 All PASS with confidence ≥ 85 → proceed to Step 3.
-Any FAIL → route to @apex-engineer + /chain-c-debug. Provide structured findings.
+Any FAIL → route to @apex-engineer + /ce-debug. Provide structured findings.
 Any WARN with confidence < 85 → request specific clarification. Do not block, but flag.
 Max 3 review-fix iterations. After 3: escalate to user with all findings across iterations.
 
@@ -54,5 +54,6 @@ Any slop found → return to @apex-engineer for cleanup BEFORE PASS issued.
 }
 ```
 
-## Success Criteria
+## Success Criteria & Handoff
 All 3 personas: PASS, confidence ≥ 85. Slop = 0. Consolidated report generated.
+Upon success, hand off execution explicitly to `/ce-compound` (to document learnings) or `/ce-polish-beta` (for final polish).

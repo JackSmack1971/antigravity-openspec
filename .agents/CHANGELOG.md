@@ -1,5 +1,17 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Compound Engineering Workflows Update (v2026-05-ce-workflows)
+### Added
+- Created `.agents/workflows/engineering/ce-strategy.md` — `/ce-strategy` workflow: Upstream anchor for STRATEGY.md initialization.
+- Created `.agents/workflows/engineering/ce-brainstorm.md` — `/ce-brainstorm` workflow: Requirements brainstorming phase.
+- Created `.agents/workflows/engineering/ce-work.md` — `/ce-work` workflow: Execution and implementation phase.
+
+### Changed
+- Upgraded `.agents/workflows/engineering/ce-plan.md` — `/ce-plan`: Detailed the 6 iterative phases explicitly (Phase 0 to Phase 5).
+- Upgraded `.agents/workflows/engineering/ce-code-review.md` — `/ce-code-review`: Explicitly defined handoff criteria to `/ce-compound` or `/ce-polish-beta`.
+- Upgraded `.agents/workflows/engineering/ce-debug.md` — `/ce-debug`: Structured exactly to a 4-step sequence (Reproduce failures → trace root cause → form testable hypotheses → implement test-first fixes).
+- Upgraded `.agents/workflows/engineering/ce-compound.md` — `/ce-compound`: Explicitly represented as the final phase of the continuous core loop.
+
 ## [2026-05-02] - Agent Skills Workflow Suite (v2026-05-agent-skills-v1)
 ### Added
 - Created `.agents/workflows/engineering/development-lifecycle.md` — `/dev-lifecycle` workflow: Full development lifecycle (DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP).

@@ -1,6 +1,6 @@
 ---
 name: ce-debug
-description: Use for systematic debugging of reported bugs or test failures.
+description: Triggered by bug reports. Executes: Reproduce failures → trace root cause → form/testable hypotheses → implement test-first fixes.
 ---
 # /ce-debug — Systematic Debugging (Chain C)
 
@@ -8,25 +8,24 @@ description: Use for systematic debugging of reported bugs or test failures.
 NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST.
 Violating this law = symptom patching = guaranteed recurrence.
 
-## 4-Phase Workflow (complete each phase before next — no skipping)
+## Workflow Execution (Triggered by bug reports or test failures)
 
-### Phase 1: Root Cause Investigation
+### Phase 1: Reproduce Failures
 1. **Pitfall Audit:** Check `.agents/knowledge/pitfalls/` for known issues related to the current symptom.
-2. Reproduce exactly (minimal repro case).
-3. Trace root cause. Gather evidence (logs, stack traces, instrumentation).
-4. Document root cause in `findings.md` BEFORE proceeding.
+2. **Repro:** Reproduce exactly (minimal repro case). Do not write any fix code yet.
 
-### Phase 2: Pattern Analysis
-1. Find working baseline example. Compare diff between working and broken.
-2. Map exact change that introduced regression.
+### Phase 2: Trace Root Cause
+1. Find working baseline example if available. Compare diff between working and broken.
+2. Trace root cause. Gather evidence (logs, stack traces, instrumentation).
+3. Document root cause in `findings.md` BEFORE proceeding.
 
-### Phase 3: Hypothesis & Testing
-1. Form ONE falsifiable hypothesis.
-2. Write minimal test BEFORE implementing fix.
+### Phase 3: Form Testable Hypotheses
+1. Form ONE falsifiable hypothesis about why the root cause occurred.
+2. Write a minimal failing test BEFORE implementing a fix (Test-Driven Debugging).
 
-### Phase 4: Implementation
-1. Apply single fix at root cause (not symptom).
-2. Verify fix resolves root cause.
+### Phase 4: Implement Test-First Fixes
+1. Apply single fix at the determined root cause (not the symptom).
+2. Verify fix resolves the root cause and passes the newly written test.
 3. 3+ failed fix attempts → question architecture → escalate to user.
 
 ## Defense-in-Depth

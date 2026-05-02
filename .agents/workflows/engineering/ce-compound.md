@@ -1,9 +1,13 @@
 ---
 name: ce-compound
-description: Use to document learnings and reset the engineering loop.
+description: Final step of the CE core loop. Documents learnings and resets the engineering loop with compounded context.
 ---
-# /ce-compound — Learning Documentation
+# /ce-compound — Learning Documentation & Compounding
 
-1. Collect findings.md
-2. Update persistent project context
-3. /retro
+## Purpose
+The final phase of the continuous execution loop: `/ce-brainstorm → /ce-plan → /ce-work → /ce-code-review → /ce-compound`.
+
+## Execution
+1. **Collect Findings:** Gather insights from `findings.md` and the `ce-code-review` artifacts.
+2. **Compound Context:** Update persistent project context (Knowledge Items in `.agents/knowledge/`) to ensure the next iteration of the loop is smarter.
+3. **Repeat/Reset:** Reset the engineering loop or invoke `/retro` if the initiative is complete.
