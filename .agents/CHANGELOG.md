@@ -1,5 +1,11 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - React Best Practices Workflows Update (v2026-05-react-workflows)
+### Added
+- Created `.agents/workflows/react/build-skill.md` — `/build-skill` workflow: Deterministic compilation flow (pnpm install → build → validate → extract-tests).
+- Created `.agents/workflows/react/create-new-rule.md` — `/create-new-rule` workflow: Exact template formatting rule authoring flow.
+- Created `.agents/workflows/react/react-skill-invocation.md` — Agent Skill Invocation workflow: Contextually triggered activation for React/Next.js domain tasks.
+
 ## [2026-05-02] - PM-Skills Workflows Update (v2026-05-pm-workflows)
 ### Added
 - Created `.agents/workflows/pm/marketplace-invocation.md` — Marketplace-wide Command Invocation Pattern: Cross-plugin methodology for fluid execution and handoffs.
