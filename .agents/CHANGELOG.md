@@ -1,5 +1,14 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Agent Skills Workflow Suite (v2026-05-agent-skills-v1)
+### Added
+- Created `.agents/workflows/engineering/development-lifecycle.md` — `/dev-lifecycle` workflow: Full development lifecycle (DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP).
+- Created `.agents/workflows/engineering/spec-driven-development.md` — `/sdd` workflow: Internal spec-driven gated workflow for tracking living documents.
+- Created `.agents/workflows/engineering/skill-orchestration.md` — `/orchestrate` workflow: Skill invocation & orchestration with parallel fan-out personas.
+
+### Changed
+- Upgraded `.agents/workflows/sprint/spec.md` — `/spec`: Added mandatory human review gate and 6-area generation sequence.
+
 ## [2026-05-02] - Gstack Sprint Workflow Suite (v2026-05-gstack-sprint-v1)
 ### Added
 - Created `.agents/workflows/sprint/sprint.md` — `/sprint` workflow: canonical Think-Plan-Build-Review-Test-Ship-Reflect sprint lifecycle; phase map with `/office-hours → /plan-ceo-review → /spec → build → /review → /qa → /ship → /retro`; guardrail interrupt table (`/freeze`, `/guard`, 3-Strike). (Workflows Refs §1, Workflow 4)

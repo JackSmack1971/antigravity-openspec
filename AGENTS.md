@@ -76,6 +76,9 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 /security-threat-modeling-pipeline → .agents/workflows/security/threat-model-pipeline.md
 /discover        → .agents/workflows/pm/discover.md
 /writing-skills  → .agents/workflows/meta/writing-skills.md
+/dev-lifecycle   → .agents/workflows/engineering/development-lifecycle.md
+/sdd             → .agents/workflows/engineering/spec-driven-development.md
+/orchestrate     → .agents/workflows/engineering/skill-orchestration.md
 /core-loop        → .agents/workflows/browser/core-loop.md
 /quickstart-batch → .agents/workflows/browser/quickstart-batch.md
 /login            → .agents/workflows/browser/login.md
