@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Security Scanning Workflows Update (v2026-05-security-workflows)
+### Added
+- Created `.agents/workflows/security/attack-tree-construction.md` — Attack tree construction sequence: Risk-prioritized logic block (Build → Add Nodes → Compute paths → JSON export → Visualization).
+- Created `.agents/workflows/security/sast-deployment.md` — SAST Tool Configuration & CI/CD Deployment: Procedural enforcement for automated scanning (Select → Configure → Integrate → Custom rules → Validate).
+
+### Changed
+- Upgraded `.agents/workflows/security/threat-model-pipeline.md` — `/security-threat-modeling-pipeline`: Explicitly detailed the interconnected 5-step defense-in-depth orchestration sequence.
+
 ## [2026-05-02] - React Best Practices Workflows Update (v2026-05-react-workflows)
 ### Added
 - Created `.agents/workflows/react/build-skill.md` — `/build-skill` workflow: Deterministic compilation flow (pnpm install → build → validate → extract-tests).
