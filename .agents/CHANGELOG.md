@@ -1,5 +1,12 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - PM-Skills Workflows Update (v2026-05-pm-workflows)
+### Added
+- Created `.agents/workflows/pm/marketplace-invocation.md` — Marketplace-wide Command Invocation Pattern: Cross-plugin methodology for fluid execution and handoffs.
+
+### Changed
+- Upgraded `.agents/workflows/pm/discover.md` — `/discover`: Explicitly structured the 7-step sequence (Understand context → Brainstorm → Identify assumptions → Prioritize → Design experiments → Create plan → Offer next steps).
+
 ## [2026-05-02] - Planning with Files Workflows Update (v2026-05-planning-workflows)
 ### Added
 - Created `.agents/workflows/engineering/planning-restore-context.md` — `/planning-restore-context` workflow: Mandatory state persistence sequence on session resume.
