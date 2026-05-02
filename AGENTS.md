@@ -38,7 +38,7 @@ description: Single entry point. Loads Rules. Registers Workflows. Hardened for 
 - **Skills** = Progressive-disclosure vocabulary (on-demand competencies).
 ---
 
-## 5 POWER-CHAINS (Governance Triads)
+## 6 POWER-CHAINS (Governance Triads)
 | Chain | Trigger | Rules | Workflows |
 |---|---|---|---|
 | **A: Feature Build** | Feature Request | 01, 02 | /autoplan → /spec → /ce-plan → /ship |
@@ -47,6 +47,7 @@ description: Single entry point. Loads Rules. Registers Workflows. Hardened for 
 | **D: PM Discovery** | Decision Needed | Torres OST | /discover → /opsx:propose |
 | **E: Skill Authoring**| Gap Detected | CSO, <500w | /writing-skills (RED → GREEN → REFACT) |
 | **F: Context Resilience**| High Density | 10, 11 | /para-knowledge → /ce-compound |
+| **G: Browser Automation**| UI/QA/Login/Scrape | 03, 07 | /core-loop → /login → /state-persist |
 
 ---
 
@@ -73,6 +74,11 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 /security-threat-modeling-pipeline → .agents/workflows/security/threat-model-pipeline.md
 /discover        → .agents/workflows/pm/discover.md
 /writing-skills  → .agents/workflows/meta/writing-skills.md
+/core-loop        → .agents/workflows/browser/core-loop.md
+/quickstart-batch → .agents/workflows/browser/quickstart-batch.md
+/login            → .agents/workflows/browser/login.md
+/state-persist    → .agents/workflows/browser/state-persist.md
+/specialized-load → .agents/workflows/browser/specialized-load.md
 
 ---
 

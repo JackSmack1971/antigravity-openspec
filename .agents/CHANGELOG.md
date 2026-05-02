@@ -1,7 +1,19 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Browser Automation Workflow Suite (v2026-05-browser-workflows-v1)
+### Added
+- Created `.agents/workflows/browser/core-loop.md` — `/core-loop` workflow: CDP referential DOM validation via snapshot-and-ref loop. Enforces mandatory re-snapshot after every page state change. (Audit Report §2, Workflow 1)
+- Created `.agents/workflows/browser/quickstart-batch.md` — `/quickstart-batch` workflow: Multi-command serialization via `agent-browser batch`; supports inline string args and JSON stdin with `--bail` fail-fast mode. (Audit Report §2, Workflow 2)
+- Created `.agents/workflows/browser/login.md` — `/login` workflow: Auth vault credential orchestration isolating PII from shell history; chains `auth save → open → auth login → wait --url → snapshot -i`. (Audit Report §2, Workflow 3)
+- Created `.agents/workflows/browser/state-persist.md` — `/state-persist` workflow: Session bridging paradigm for cross-run restore via `state save ./auth.json` and `--state` flag or `AGENT_BROWSER_SESSION_NAME` env. (Audit Report §2, Workflow 4)
+- Created `.agents/workflows/browser/specialized-load.md` — `/specialized-load` workflow: Domain context shifting via `agent-browser skills get <domain>`; covers electron/slack/dogfood/vercel-sandbox/agentcore. (Audit Report §2, Workflow 5)
+
+### Changed
+- Upgraded Master Router (`AGENTS.md`) to **v2026-05-browser-workflows-v1**: registered all 5 browser workflows, expanded Power-Chain table from 5 to 6 chains with new **Chain G: Browser Automation** (Rules 03, 07 → /core-loop → /login → /state-persist).
+
 ## [2026-05-02] - Session Continuity Hardening & Script Path Fixes (v2026-05-continuity-v1)
 ### Fixed
+
 - **Critical**: Fixed CWD-relative path bug in all 3 Python scripts (`crystallization-tracker.py`, `check-complete.py`, `session-catchup.py`). All scripts now use `os.path.abspath(__file__)` to resolve workspace root, preventing failures when called from any working directory on Windows (Rule 11.5).
 
 ### Added
