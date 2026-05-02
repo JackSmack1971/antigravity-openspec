@@ -1,5 +1,11 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Planning with Files Workflows Update (v2026-05-planning-workflows)
+### Added
+- Created `.agents/workflows/engineering/planning-restore-context.md` — `/planning-restore-context` workflow: Mandatory state persistence sequence on session resume.
+- Created `.agents/workflows/engineering/planning-lifecycle-hooks.md` — `/planning-lifecycle-hooks` workflow: Matcher-based hooks (UserPromptSubmit, PreToolUse, PostToolUse, Stop) across the operational lifecycle.
+- Created `.agents/workflows/engineering/planning-core-pattern.md` — `/planning-core-pattern` workflow: 3-File Persistent Memory state-saving iteration loop (task_plan, progress, findings).
+
 ## [2026-05-02] - OpenSpec Workflows Update (v2026-05-openspec-workflows)
 ### Added
 - Created `.agents/workflows/openspec/opsx-core-quick-path.md` — Core Quick Path workflow: propose → apply → sync → archive.
