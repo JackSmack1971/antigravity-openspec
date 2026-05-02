@@ -1,5 +1,14 @@
 # APEX Framework Changelog
 
+## [2026-05-02] - Systematic Debugging Workflows Update (v2026-05-debug-workflows)
+### Added
+- Created `.agents/workflows/engineering/backward-root-cause-tracing.md` — Backward Root-Cause Tracing sequence: Deterministic data flow extraction integrating with find-polluter.sh.
+- Created `.agents/workflows/engineering/defense-in-depth-validation.md` — Defense-in-Depth Validation workflow: 4-layer safety check (Entry → Business Logic → Env Guards → Debug Instrumentation).
+- Created `.agents/workflows/engineering/condition-based-waiting.md` — Condition-Based Waiting routine: Flakiness elimination via predicate polling loops.
+
+### Changed
+- Renamed and upgraded `ce-debug.md` to `.agents/workflows/engineering/systematic-debugging.md` — `/systematic-debugging`: Enforced strict 4-Phase Procedure (Root Cause Investigation → Pattern Analysis → Hypothesis/Testing → Implementation) with architectural escalation triggers on 3+ failures.
+
 ## [2026-05-02] - Security Scanning Workflows Update (v2026-05-security-workflows)
 ### Added
 - Created `.agents/workflows/security/attack-tree-construction.md` — Attack tree construction sequence: Risk-prioritized logic block (Build → Add Nodes → Compute paths → JSON export → Visualization).
