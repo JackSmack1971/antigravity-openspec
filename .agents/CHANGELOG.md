@@ -1,5 +1,14 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Self-Improvement Inspirations Index
+
+### Added
+- `.agents/knowledge/self-improvement-inspirations/INDEX.md`
+
+### Noted (manual action required if missing)
+- `gstack agent audit report.md` (not present — add manually from source corpus.)
+- `context7 MCP server agent audit report.md` (not present — add manually from source corpus.)
+
 ## [2026-05-03] - Persistent Memory Templates + Gitignore Hardening
 
 ### Added
