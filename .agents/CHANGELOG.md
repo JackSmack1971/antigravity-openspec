@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Governance Skills Update
+### Added
+- `.agents/skills/governance/using-agent-skills/SKILL.md` (meta-discovery flowchart for task-to-skill mapping).
+
+### Skipped (GOLDEN RULE)
+- `.agents/skills/governance/planning-with-files/SKILL.md` — Existing file is highly mature (v2.36.3), contains all requested 3-file nucleus and 2-action rule mechanics.
+- `.agents/skills/governance/spec-driven-development/SKILL.md` — Existing file is mature, contains requested 6-area spec structure and human review gates.
+
 ## [2026-05-03] - AGENTS.md Master Router v2026-05-full
 ### Changed
 - Registered 22 additional slash commands (`/open`, `/qa`, `/ce-strategy`, `/ce-brainstorm`, `/ce-work`, `/opsx:apply`, `/opsx:sync`, `/opsx:archive`, `/opsx:new`, `/opsx:continue`, `/opsx:ff`, `/opsx:verify`, `/opsx:bulk-archive`, `/opsx:explore`, `/office-hours`, `/codex`, `/browse`, `/careful`, `/guard`, `/freeze`, `/discover` alias, `/restore-context`) in REGISTERED WORKFLOWS.
