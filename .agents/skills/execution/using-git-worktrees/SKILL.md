@@ -18,9 +18,14 @@ allowed-tools: Read, Write, Bash
 3. If neither: AskUserQuestion — global (~/.config/worktrees/) vs local (.worktrees/)?
 
 ### Step 2: Safety Verification (MUST complete before creating worktree)
-```bash
-git check-ignore .worktrees/ worktrees/
-```
+1. Run gitignore-check.sh:
+   ```bash
+   bash scripts/gitignore-check.sh
+   ```
+2. Verify with git check-ignore:
+   ```bash
+   git check-ignore .worktrees/ worktrees/
+   ```
 If NOT ignored → add to .gitignore → commit before ANY worktree creation.
 NEVER skip this step. Unsuppressed worktrees corrupt repo history.
 
@@ -44,6 +49,8 @@ NEVER proceed with failing tests without explicit user permission.
 - NEVER create worktree before gitignore verification (project-local dirs).
 - NEVER skip baseline test verification.
 - NEVER assume directory without priority-order check.
+- **Worktree Cleanup**: Run `git worktree remove` after merging the feature branch.
+- **Rule 11 Compliance**: All paths within the worktree must be repo-relative.
 
 ## Quality Gates
 - [ ] .worktrees/ (or worktrees/) is gitignored and committed

@@ -20,9 +20,12 @@ Violating this law = symptom patching = guaranteed recurrence.
 ## 4-Phase Workflow (complete each phase before next — no skipping)
 
 ### Phase 1: Root Cause Investigation
-Reproduce exactly (minimal repro case). Check recent changes: git log --oneline -10.
-Gather evidence: logs, stack traces, instrumentation. Trace data flow backward from symptom.
-Use find-polluter.sh for test isolation if test pollution suspected.
+Reproduce exactly (minimal repro case). 
+1. Check `.agents/knowledge/pitfalls/` for existing Knowledge Item (KI) match FIRST.
+2. Read error message verbatim.
+3. Check recent changes: `git log --oneline -10`.
+4. Gather evidence: logs, stack traces, instrumentation. Trace data flow backward from symptom.
+5. Use `bash scripts/find-polluter.sh` for test isolation if test pollution suspected.
 Output: root cause documented in findings.md before proceeding.
 
 ### Phase 2: Pattern Analysis
@@ -36,7 +39,12 @@ Test hypothesis. If disproven: return to Phase 1 with new evidence.
 ### Phase 4: Implementation
 Create failing test first (TDD). Apply single fix at root cause (not symptom).
 Verify fix resolves root cause. Add Defense-in-Depth: 4-layer validation.
-3+ failed fix attempts → question architecture → escalate to user.
+3-Strike Escalation: 3 failed hypotheses → architectural rethink → escalate to user.
+
+## Sub-skills
+- **root-cause-tracing** (Phase 1)
+- **defense-in-depth** (Phase 4)
+- **find-polluter** (bisection via `scripts/find-polluter.sh`)
 
 ## Defense-in-Depth (Post-Phase 4 Always)
 Add 4-layer validation: Entry guards → Business Logic checks → Environment guards → Debug instrumentation.

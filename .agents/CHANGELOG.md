@@ -1,5 +1,14 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Execution Skills: git-worktrees + systematic-debugging
+### Added
+- `.agents/skills/execution/using-git-worktrees/scripts/gitignore-check.sh`
+- `.agents/skills/execution/systematic-debugging/scripts/find-polluter.sh`
+
+### Changed
+- `.agents/skills/execution/using-git-worktrees/SKILL.md`: Surgically updated to mandate `gitignore-check.sh`, include Worktree Cleanup and Rule 11 (repo-relative paths) mandates.
+- `.agents/skills/execution/systematic-debugging/SKILL.md`: Surgically updated to mandate Pitfall KI check in Phase 1 and include 3-Strike Escalation and Sub-skills list.
+
 ## [2026-05-03] - KI Curator Skill + Archive Directory
 ### Added
 - `.agents/skills/governance/ki-curator/SKILL.md` (SemVer+archive governance for KI lifecycle).
