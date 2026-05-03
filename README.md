@@ -235,6 +235,17 @@ Workflows are Markdown files in `.agents/workflows/`. Each one is a numbered che
 | `/security-threat-modeling-pipeline` | **B** | Full STRIDE-to-SAST security pipeline |
 | `/discover` | **D** | 7-step PM discovery & OST mapping |
 
+---
+
+### OpenSpec Integration
+
+OpenSpec is the spec-driven governance layer for Antigravity. It uses a structured artifact pipeline to ensure every change is proposed, specified, designed, and tracked deterministically.
+
+- **Config**: `openspec/config.yaml` provides the project context and per-artifact rule injection (e.g., SHALL/MUST for specs).
+- **Changes**: Active changes live in `openspec/changes/<change-name>/`.
+- **Schema**: `openspec/schemas/spec-driven/schema.yaml` defines the Antigravity-native artifact dependency graph.
+- **Commands**: `/opsx:propose` kicks off a new change by injecting project context and rules directly into the AI's generation prompt.
+
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 
 ```

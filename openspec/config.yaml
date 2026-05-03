@@ -1,0 +1,31 @@
+# OpenSpec Project Configuration
+# Loaded by all /opsx:* workflows
+# Max size: 50KB
+
+schema: ./schemas/spec-driven/schema.yaml
+
+context: |
+  This is the JackSmack1971/antigravity-openspec project.
+  It is an Antigravity-native agent governance framework for the Gemini CLI.
+  The codebase uses: Markdown, YAML, Python (scripts), Bash (scripts).
+  All file paths are repo-relative. No absolute paths.
+  The agent governance triad is: Rules → Workflows → Skills.
+  Primary directory: .agents/
+  Key entry point: AGENTS.md
+
+rules:
+  proposal:
+    - Include a rollback plan for every proposed change
+    - Identify which .agents/ components are affected
+    - State the 6-layer impact (which of Input/Memory/Capability/Execution/Integration/Loop is affected)
+  specs:
+    - Use Given/When/Then format for ALL scenarios
+    - Use SHALL/MUST for all requirement statements
+    - Include traceability: requirement_id → test_case
+  design:
+    - Include directory tree showing exact file paths
+    - Show YAML frontmatter for any new SKILL.md or workflow files
+  tasks:
+    - Each task must be atomic (max 1 file changed per task)
+    - Each task must have acceptance criteria
+    - Use checkbox format: - [ ] task description

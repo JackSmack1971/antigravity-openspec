@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - OpenSpec Project Integration Layer
+
+### Added
+- `openspec/config.yaml` (project context + per-artifact rules injection)
+- `openspec/changes/.gitkeep`
+- `openspec/archive/.gitkeep`
+- `openspec/schemas/spec-driven/schema.yaml` (Antigravity-variant artifact schema)
+
 ## [2026-05-03] - Security + PM + Meta Workflows
 
 ### Added

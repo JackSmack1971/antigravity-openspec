@@ -1,0 +1,54 @@
+# OpenSpec Schema — Antigravity Variant
+# Defines artifact structure, dependency graph, and prompt templates
+
+artifacts:
+  proposal:
+    requires: []
+    file: proposal.md
+    sections:
+      - Why
+      - What Changes
+      - Capabilities
+      - Rollback Plan
+      - Affected 6-Layer Components
+    instructions: |
+      <context>{{project_context}}</context>
+      <rules>{{rules.proposal}}</rules>
+      Generate a proposal.md with all required sections.
+      Use ADDED/MODIFIED/REMOVED delta notation for What Changes.
+
+  specs:
+    requires: [proposal]
+    file: specs.md
+    sections:
+      - Requirements
+      - Scenarios
+      - Constraints
+    instructions: |
+      <context>{{project_context}}</context>
+      <rules>{{rules.specs}}</rules>
+      Requirements use SHALL/MUST.
+      Scenarios use Given/When/Then.
+      Every requirement has a unique ID: REQ-NNN.
+
+  design:
+    requires: [specs]
+    file: design.md
+    sections:
+      - Directory Tree
+      - File Contents (YAML frontmatter + structure)
+      - Interface Contracts
+    instructions: |
+      <context>{{project_context}}</context>
+      <rules>{{rules.design}}</rules>
+      Show exact file paths (repo-relative).
+      Show YAML frontmatter for all new .agents/ files.
+
+  tasks:
+    requires: [design]
+    file: tasks.md
+    instructions: |
+      <context>{{project_context}}</context>
+      <rules>{{rules.tasks}}</rules>
+      Generate atomic tasks. Each task: 1 file change.
+      Checkbox format. Acceptance criteria included.
