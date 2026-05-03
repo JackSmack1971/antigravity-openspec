@@ -1,5 +1,10 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Execution Skills: ce-plan + react-best-practices
+### Added
+- `.agents/skills/execution/ce-plan/SKILL.md` (6-phase implementation planning with mandatory user gate).
+- `.agents/skills/execution/react-best-practices/SKILL.md` (40+ categorized rules, including hydration safety and server/client boundary enforcement).
+
 ## [2026-05-03] - Execution Skills: git-worktrees + systematic-debugging
 ### Added
 - `.agents/skills/execution/using-git-worktrees/scripts/gitignore-check.sh`

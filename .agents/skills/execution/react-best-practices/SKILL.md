@@ -11,33 +11,42 @@ allowed-tools: Read, Write, Bash
 ## CRITICAL Rules (apply FIRST — these cause production outages)
 
 ### ASYNC: Promise.all for Independent Operations
+- **Requirement**: Use `Promise.all()` for independent async operations. NEVER sequential awaits.
 ```ts
-// WRONG — Sequential (2-10x slower, blocks render)
-const user = await getUser(id);
-const posts = await getPosts(id);
-
-// CORRECT — Parallel (minimal latency)
+// CORRECT — Parallel
 const [user, posts] = await Promise.all([getUser(id), getPosts(id)]);
 ```
 
 ### BUNDLE: No Barrel File Imports
-```ts
-// WRONG — imports entire barrel (bundle bloat)
-import { Button, Input } from './components/index';
-// CORRECT — direct source import
-import { Button } from './components/Button';
-import { Input } from './components/Input';
-```
+- **Requirement**: NEVER re-export from `index.ts`. Import directly from the source file.
+- **Verification**: Run `grep -r "export * from" src/`.
+
+### SERVER/CLIENT BOUNDARY
+- **Requirement**: Provider wrappers MUST be in separate "use client" files. NEVER inline in `layout.tsx`.
+
+### HYDRATION SAFETY
+- **Requirement**: Third-party providers must not wrap the root layout directly. Create a `ClientProvider.tsx` wrapper instead.
+- **KI Reference**: Check `.agents/knowledge/` for React 19 hydration pitfall KI.
+
+### DATA FETCHING
+- **Requirement**: NEVER use `useEffect` for initial data fetching. Use React Query, SWR, or Server Components instead.
+
+### OPTIMIZATION
+- **Images**: Always use `next/image` with explicit `width` and `height`.
+- **Fonts**: Always use `next/font`. NEVER use `@import` in CSS.
 
 ## HIGH Priority Rules
-- React Server Components (RSC): use for all non-interactive UI (reduces client JS bundle).
-- Avoid unnecessary re-renders: useMemo/useCallback ONLY with stable, meaningful deps.
-- Data fetching: server-side in RSC or server actions. Avoid useEffect for initial data.
-- State: colocate as close to consumer as possible. No prop drilling > 2 levels.
+- **TypeScript**: Strict mode ALWAYS enabled.
+- **Keys in Lists**: Always use stable IDs, NEVER array indices.
+- **Error Boundaries**: Required for all async subtrees.
+- **Suspense**: Required for all async server components.
+- **RSC**: Use React Server Components for all non-interactive UI.
+- **State**: Colocate as close to consumer as possible. No prop drilling > 2 levels.
 
-## MEDIUM Priority Rules
-- useEffect for derived state → WRONG. Compute during render instead.
-- Large components → split at 100+ lines into smaller focused components.
+## Workflow
+1. **Activation**: Load this skill (Layer 2) on ANY React/Next.js file change.
+2. **Self-Audit**: After implementation, verify code against the CRITICAL rules list above.
+3. **Verification**: Pre-commit, run `grep -r "export * from" src/` to confirm no barrel imports.
 
 ## Verification
 Before any ship: pnpm build → must exit 0 with zero warnings.
