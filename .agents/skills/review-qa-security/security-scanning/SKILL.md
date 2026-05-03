@@ -41,6 +41,13 @@ Output: .semgrep.yml (or equivalent) + CI/CD pipeline snippet.
 - Every security requirement → traceable automated test.
 - SAST CI/CD gate must be committed before any merge.
 
+## Sub-Skills
+- [stride-analysis-patterns](file:///c:/workspaces/apex-production-pipeline/.agents/skills/review-qa-security/security-scanning/stride-analysis-patterns/SKILL.md)
+- [security-requirement-extraction](file:///c:/workspaces/apex-production-pipeline/.agents/skills/review-qa-security/security-scanning/security-requirement-extraction/SKILL.md)
+- [attack-tree-construction](file:///c:/workspaces/apex-production-pipeline/.agents/skills/review-qa-security/security-scanning/attack-tree-construction/SKILL.md)
+- [threat-mitigation-mapping](file:///c:/workspaces/apex-production-pipeline/.agents/skills/review-qa-security/security-scanning/threat-mitigation-mapping/SKILL.md)
+- [sast-configuration](file:///c:/workspaces/apex-production-pipeline/.agents/skills/review-qa-security/security-scanning/sast-configuration/SKILL.md)
+
 ## Quality Gates
 - [ ] All 6 STRIDE categories documented in ThreatModel.md
 - [ ] MitigationPlan coverage score ≥ 0.8

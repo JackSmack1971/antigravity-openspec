@@ -1,5 +1,16 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Security Scanning: 5 Sub-Skills Added
+### Added
+- `.agents/skills/review-qa-security/security-scanning/stride-analysis-patterns/SKILL.md`
+- `.agents/skills/review-qa-security/security-scanning/security-requirement-extraction/SKILL.md`
+- `.agents/skills/review-qa-security/security-scanning/attack-tree-construction/SKILL.md`
+- `.agents/skills/review-qa-security/security-scanning/threat-mitigation-mapping/SKILL.md`
+- `.agents/skills/review-qa-security/security-scanning/sast-configuration/SKILL.md`
+
+### Changed
+- `.agents/skills/review-qa-security/security-scanning/SKILL.md`: Added Sub-Skills section with relative path references to specialized pipeline components.
+
 ## [2026-05-03] - Execution Skills: ce-plan + react-best-practices
 ### Added
 - `.agents/skills/execution/ce-plan/SKILL.md` (6-phase implementation planning with mandatory user gate).
