@@ -31,7 +31,7 @@ agent-browser find role button click --name "Submit"  # semantic find
 ```bash
 agent-browser auth save app --url <login> --username user --password-stdin
 agent-browser auth login app         # no credential in shell history
-agent-browser state save ./auth.json # persist session
+agent-browser state save .agents/artifacts/browser-state.json # persist session
 ```
 
 ## Batch Mode (multi-command efficiency)
@@ -45,5 +45,6 @@ Load for non-web tasks: `agent-browser skills get electron|slack|vercel-sandbox`
 ## Quality Gates
 - [ ] Chrome installed: agent-browser install (first time)
 - [ ] Re-snapshot after every page state change before next interaction
+- [ ] .agents/artifacts/ is gitignored before first browser session
 - [ ] ALWAYS generate a visual screenshot or recording artifact upon task completion (per .agents/rules/07-visual-verification.md).
 - [ ] Execution adheres to L0 Foundational Rules (SIMPLICITY FIRST, SURGICAL EDITS)

@@ -1,5 +1,12 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Review/QA Skills: ce-correctness-reviewer + agent-browser
+### Added
+- `.agents/skills/review-qa-security/ce-correctness-reviewer/SKILL.md` (JSON-structured 3-persona logic review).
+
+### Changed
+- `.agents/skills/review-qa-security/agent-browser/SKILL.md`: Surgically updated to include state persistence in `.agents/artifacts/browser-state.json` and mandatory gitignore verification for the artifacts directory.
+
 ## [2026-05-03] - Security Scanning: 5 Sub-Skills Added
 ### Added
 - `.agents/skills/review-qa-security/security-scanning/stride-analysis-patterns/SKILL.md`
