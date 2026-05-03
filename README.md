@@ -228,6 +228,10 @@ Workflows are Markdown files in `.agents/workflows/`. Each one is a numbered che
 | `/ce-code-review` | **C** | Multi-persona tiered quality gate |
 | `/ce-compound` | **F** | Learning documentation + context reset |
 | `/retro` | **A/F** | Self-improvement knowledge extraction |
+| `/opsx:propose` | **D** | Core OpenSpec proposal pipeline |
+| `/opsx:apply` | **D** | Execute OpenSpec task implementation |
+| `/opsx:sync` | **D** | Synchronize OpenSpec artifacts |
+| `/opsx:archive` | **D** | Archive completed OpenSpec changes |
 
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 

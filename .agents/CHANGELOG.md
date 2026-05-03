@@ -1,5 +1,11 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - OpenSpec Workflows Created
+
+### Added
+- `.agents/workflows/openspec/opsx-propose.md` (core proposal+apply+sync+archive pipeline)
+- `.agents/workflows/openspec/opsx-expanded.md` (new/continue/ff/verify/bulk-archive/explore)
+
 ## [2026-05-03] - Engineering Workflows Created
 
 ### Added
