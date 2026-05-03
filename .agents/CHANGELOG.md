@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Artifacts Directory + CI Stubs
+
+### Added
+- `.agents/artifacts/.gitignore` (ephemeral artifacts excluded from git)
+- `.agents/artifacts/README.md` (documents runtime artifact types)
+- `.github/workflows/sast.yml` (Semgrep SAST gate on PR/push to main)
+- `.github/workflows/validate-agents.yml` (.agents/ structure + secret scan on PR)
+
 ## [2026-05-03] - Self-Improvement Inspirations Index
 
 ### Added

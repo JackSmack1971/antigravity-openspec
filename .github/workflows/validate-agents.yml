@@ -1,0 +1,31 @@
+name: Validate .agents/ Structure
+
+on:
+  pull_request:
+    paths: ['.agents/**']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files exist
+        run: |
+          required=(
+            "AGENTS.md"
+            ".agents/rules/00-constitution.md"
+            ".agents/rules/03-security-baseline.md"
+            ".agents/CHANGELOG.md"
+            ".agents/mcp_config.json"
+          )
+          for f in "${required[@]}"; do
+            [ -f "$f" ] || { echo "MISSING: $f"; exit 1; }
+          done
+          echo "All required files present."
+      - name: Check no secrets in .agents/
+        run: |
+          if git grep -r "sk-\|password.*=.*['\"].\|api_key.*=.*['\"]." .agents/ 2>/dev/null; then
+            echo "FAIL: Potential secrets found in .agents/"
+            exit 1
+          fi
+          echo "Secret scan passed."

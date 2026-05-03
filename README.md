@@ -266,6 +266,15 @@ The APEX framework implements high-fidelity session persistence via the "Plannin
 - **Rule 02**: Mandates the use of these files to survive context window loss.
 - **Governance**: Managed by the `planning-with-files` skill to ensure the agent always has a canonical source of truth for the current task state.
 
+---
+
+### CI/CD Gates
+
+The APEX framework enforces quality and security through GitHub Actions workflows.
+
+- **SAST Security Gate**: Uses Semgrep to scan for vulnerabilities and secrets on every PR and push to `main`. Requires `SEMGREP_APP_TOKEN` to be set in repository secrets.
+- **Agent Structure Validator**: Validates that the `.agents/` directory structure is intact and performs a secondary regex-based secret scan to prevent accidental leaks in governance files.
+
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 
 ```
