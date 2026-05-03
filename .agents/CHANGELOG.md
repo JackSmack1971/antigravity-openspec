@@ -1,5 +1,16 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Integration Validation Pass
+
+### Verified
+- Rules: 13/13 present (00-constitution.md through 12-context-resilience.md)
+- Workflows: 15/15 core workflows present (sprint, engineering, openspec, security, pm, meta)
+- Skills: 26/26 core SKILL.md files present across all categories
+- Scripts: 5/5 core automation scripts present (.agents/scripts/ and specialized skill scripts)
+- No secrets detected in .agents/, openspec/, or .github/
+- All mandatory .gitignore entries present (agents/artifacts, FREEZE_REPORT)
+- CI workflows present and functional (sast.yml, validate-agents.yml)
+
 ## [2026-05-03] - README.md Comprehensive Upgrade
 
 ### Changed

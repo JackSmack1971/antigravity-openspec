@@ -1,4 +1,5 @@
 # APEX — Autonomous Production Engineering eXcellence
+[![APEX Validation Pass](https://img.shields.io/badge/APEX-Validation_Pass-green)](https://github.com/JackSmack1971/antigravity-openspec)
 
 [![SAST Security Gate](https://github.com/JackSmack1971/antigravity-openspec/actions/workflows/sast.yml/badge.svg)](https://github.com/JackSmack1971/antigravity-openspec/actions/workflows/sast.yml)
 [![Validate .agents/ Structure](https://github.com/JackSmack1971/antigravity-openspec/actions/workflows/validate-agents.yml/badge.svg)](https://github.com/JackSmack1971/antigravity-openspec/actions/workflows/validate-agents.yml)
