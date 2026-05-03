@@ -1,62 +1,26 @@
 ---
 name: restore-context
-description: Session resume and lifecycle hook management. Auto-triggered on any session start if task_plan.md exists. Slash command: /restore-context
+description: Session recovery and lifecycle hook handler. Orchestrates task_plan.md, progress.md, and crystallization tracking.
 ---
-# /restore-context — Session Resume Protocol
+# /restore-context — Lifecycle Hook Management
 
-## Auto-Trigger (Lifecycle Hooks)
+## UserPromptSubmit Hook
+1. **Read task_plan.md (head -50 lines)** → inject as session preamble.
+2. **Read progress.md (tail -20 lines)** → inject as recent context.
+3. **Read CHANGELOG.md (tail -10 lines)** → check for recent changes.
+4. **If task_plan.md missing**: initialize with current user intent.
 
-### UserPromptSubmit (every message)
-```bash
-if [ -f task_plan.md ]; then
-  echo "[APEX] ACTIVE PLAN DETECTED — injecting context header..."
-  echo "=== CURRENT PLAN ===" && head -50 task_plan.md
-  echo "=== RECENT PROGRESS ===" && tail -20 progress.md
-fi
-```
+## PreToolUse Hook
+1. **Prepend active plan phase snippet** from task_plan.md.
+2. **Check action count**: if approaching 2-action threshold, remind to update progress.md.
 
-### PreToolUse (on Write/Edit/Bash/Read/Glob/Grep)
-Prepend to context: current active phase snippet from task_plan.md.
-Reminder: "Current phase: [X]. Objective: [Y]."
+## PostToolUse Hook
+1. **Increment action counter**.
+2. **If counter mod 2 == 0**: trigger progress.md update.
+3. **Log**: "[timestamp] ACTION: [tool] | RESULT: [outcome] | NEXT: [step]".
 
-### PostToolUse (on Write/Edit)
-Append reminder: "Update progress.md. 2-action rule. Tool call count this pair: [N]."
-
-### Stop (session end)
-```bash
-python3 scripts/check-complete.py
-# If milestone complete:
-echo "[APEX] Milestone detected. Run /retro to extract KIs from this session."
-```
-
-## Manual Restore Workflow
-
-### Step 1: Check for Active Plan
-```bash
-ls task_plan.md findings.md progress.md 2>/dev/null
-```
-
-### Step 2: Read All 3 Files
-Read task_plan.md in full. Read findings.md. Tail progress.md (last 30 lines).
-
-### Step 3: Git Sync Check
-```bash
-git diff --stat
-git status --short
-```
-Identify unsynced changes. Update planning files to reflect actual state.
-
-### Step 4: Session Catchup
-```bash
-python3 scripts/session-catchup.py  # if available
-```
-
-### Step 5: Re-Orient Announcement
-"Restored context.
-Current phase: [phase name + status].
-Last completed action: [last entry in progress.md].
-Next action: [next todo in task_plan.md].
-Proceeding."
-
-## Success Criteria
-Full re-orientation achieved. Current phase and next action clearly announced. 3 files read.
+## Stop Hook
+1. **Run `python .agents/scripts/crystallization-tracker.py --dashboard`**.
+2. **Run `python .agents/scripts/check-complete.py`**.
+3. **If incomplete milestone**: prompt /retro.
+4. **Truncate progress.md** to last 5 entries; archive older entries.

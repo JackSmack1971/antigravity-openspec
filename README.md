@@ -232,6 +232,8 @@ Workflows are Markdown files in `.agents/workflows/`. Each one is a numbered che
 | `/opsx:apply` | **D** | Execute OpenSpec task implementation |
 | `/opsx:sync` | **D** | Synchronize OpenSpec artifacts |
 | `/opsx:archive` | **D** | Archive completed OpenSpec changes |
+| `/security-threat-modeling-pipeline` | **B** | Full STRIDE-to-SAST security pipeline |
+| `/discover` | **D** | 7-step PM discovery & OST mapping |
 
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 

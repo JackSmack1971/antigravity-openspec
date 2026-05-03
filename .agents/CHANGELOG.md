@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Security + PM + Meta Workflows
+
+### Added
+- `.agents/workflows/security/threat-model-pipeline.md`
+- `.agents/workflows/pm/discover.md`
+- `.agents/workflows/meta/writing-skills.md`
+- `.agents/workflows/meta/restore-context.md`
+
 ## [2026-05-03] - OpenSpec Workflows Created
 
 ### Added

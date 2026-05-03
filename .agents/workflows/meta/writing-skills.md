@@ -1,16 +1,15 @@
 ---
 name: writing-skills
-description: TDD-adapted skill authoring sequence. Mandatory before deploying any skill.
+description: TDD skill authoring cycle. Enforces pressure testing, baseline-fail confirmation, and imperative framing with CSO optimization.
 ---
-# /writing-skills — TDD Skill Authoring (Chain E)
-
-## Purpose
-A mandatory sequence prior to deploying any skill. Enforces Test-Driven Development (TDD) principles to guarantee 100% compliance with L0 Foundational Rules under pressure.
-
-## Mandatory Sequence
-1. **Identify need:** Determine the non-obvious technique or broadly applicable pattern that requires a new skill.
-2. **Run baseline pressure scenario WITHOUT skill (RED):** Invoke `/pressure-testing` without the skill to establish a baseline of failure.
-3. **Document exact agent rationalizations/failures:** Record exactly what shortcuts the agent took and what rules it bypassed during the baseline failure.
-4. **Write minimal SKILL.md:** Author the skill using the `/skill-authoring-template`. Address ONLY the documented failures from the RED phase.
-5. **Re-run pressure tests with skill (GREEN):** Re-invoke `/pressure-testing` with the new skill equipped. 100% compliance is required.
-6. **Refactor (REFACTOR cycle):** Identify new loopholes exposed during GREEN, plug them, check token budgets (<500 words), verify CSO frontmatter constraints, and re-verify until the skill is hardened.
+# /writing-skills — Meta Skill Authoring Cycle
+1. **Identify skill gap** (from /retro output or explicit user request).
+2. **Write test cases FIRST**: what should the skill do? What should it NOT do? Write pressure tests.
+3. **Run baseline**: test current behavior → confirm it FAILS the pressure tests (baseline-fail confirmation).
+4. **Write SKILL.md**: follow YAML frontmatter conventions; use imperative "YOU MUST"; bright-line rules.
+5. **Token limit**: <500 words; CSO (Claude Search Optimization) in description field.
+6. **Persuasion principles**: imperative framing, bright-line rules, 72%+ compliance baseline target.
+7. **Test under pressure**: simulate adversarial prompts; verify skill holds.
+8. **Iterate until 100% compliance** under all pressure tests.
+9. **Register skill in AGENTS.md** SKILL REGISTRY section.
+10. **Output**: new SKILL.md in appropriate .agents/skills/ subdirectory.
