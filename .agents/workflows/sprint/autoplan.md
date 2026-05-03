@@ -24,34 +24,23 @@ Agent MUST NOT skip phases or merge checkpoints under time pressure.
 
 ## Workflow Steps
 
-### Step 1 — CEO Review (`/plan-ceo-review`)
-Strategic framing before any engineering begins.
-```
-Invoke /plan-ceo-review:
-- Define: target problem, success metric, user impact, strategic fit
-- Output: CEO-approved STRATEGY.md or brief framing doc
-```
-> **User Sovereignty Checkpoint #1**: Present strategy summary. Wait for explicit approval before proceeding.
+### Step 1 — Strategy + Plan Check
+1. Read `STRATEGY.md` if it exists.
+2. Read `task_plan.md` if it exists.
 
-### Step 2 — Design Review
-Validate UI/UX and architecture approach before committing to implementation path.
-```
-- Review proposed design/architecture for: feasibility, constraints, edge cases
-- Identify dependencies and integration risks
-- Output: design decisions documented in task_plan.md Phase 1
-```
-> **User Sovereignty Checkpoint #2**: Confirm design direction. No coding until approved.
+### Step 2 — office-hours Diagnostic (`/office-hours`)
+Run the `/office-hours` diagnostic (5-question YC frame) to ensure problem/risky-assumption alignment.
+> **User Sovereignty Checkpoint #1**: Present reframed problem + highest-leverage action. Wait for explicit approval.
 
-### Step 3 — Spec (`/spec`)
-Generate the 6-area specification document.
-```
-Invoke /spec:
-1. Clarify objective, features, tech stack, boundaries
-2. Generate SPEC.md (6 areas: objective, commands, structure, style, testing, boundaries)
-3. Save to repo root
-4. Human reviews + approves SPEC.md
-```
-> **User Sovereignty Checkpoint #3**: Human MUST approve SPEC.md. Gate is mandatory.
+### Step 3 — Feature Proposal
+Generate a formal feature proposal based on the diagnostic.
+> **User Sovereignty Checkpoint #2**: HALT until proposal is approved.
+
+### Step 4 — Spec (`/spec`)
+1. Load `spec-driven-development` skill.
+2. Generate `SPEC.md` (6 core areas).
+3. Save to repo root.
+> **User Sovereignty Checkpoint #3**: Human MUST approve SPEC.md. HALT until approved.
 
 ### Step 4 — Engineering Review
 Pre-implementation technical deep-dive by eng persona.
@@ -69,19 +58,13 @@ Developer experience validation of API surface, tooling, and docs.
 - Output: DX notes appended to findings.md
 ```
 
-### Step 6 — Implementation (`/ce-plan` → build)
-```
-Invoke /ce-plan (Phases 0–5):
-- Phase 0: Resume/Source/Scope
-- Phase 1: Context/Research
-- Phase 2: Questions
-- Phase 3: Structure
-- Phase 4: Write plan to docs/plans/
-- Phase 5: Review/Confidence Check/Handoff
+### Step 5 — Engineering Plan (`/ce-plan`)
+Invoke `/ce-plan` to generate `docs/plans/<feature>.md`.
+> **User Sovereignty Checkpoint #4**: HALT until eng plan is approved.
 
-Then: invoke /using-git-worktrees (workspace isolation)
-Then: incremental implementation with TDD
-```
+### Step 6 — Worktree Setup (`/using-git-worktrees`)
+Auto-trigger `/using-git-worktrees` to create an isolated development branch and workspace.
+Log: "Plan complete. Branch ready. Awaiting /build or /ship trigger."
 
 ### Step 7 — Code Review (`/ce-code-review`)
 3-persona parallel quality gate.

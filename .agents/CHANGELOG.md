@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Sprint Workflows Hardened
+### Added
+- `.agents/workflows/sprint/autoplan.md` (full sprint pipeline aligned with GStack office-hours).
+- `.agents/workflows/sprint/spec.md` (spec-only workflow with 5-question clarification).
+- `.agents/workflows/sprint/review.md` (PR review + fix loop with agent-browser verification).
+- `.agents/workflows/sprint/ship.md` (release workflow with SAST/guard gates).
+- `.agents/workflows/sprint/retro.md` (self-improvement Retrospective with Uplift% tracking).
+
 ## [2026-05-03] - Gstack Safety Toolkit Skills
 ### Added
 - `.agents/skills/gstack/browse/SKILL.md` (persistent browser session).

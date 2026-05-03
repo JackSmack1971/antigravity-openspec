@@ -223,14 +223,14 @@ Workflows are Markdown files in `.agents/workflows/`. Each one is a numbered che
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 
 ```
-Step 1: /spec          → Generate 6-area SPEC.md
-Step 2: YOU APPROVE    → Human reviews and approves the spec
-Step 3: /ce-plan       → Detailed implementation plan
-Step 4: /build         → Git worktree isolation + incremental code
-Step 5: /ce-code-review → 3-persona quality gate
-Step 6: /qa            → Verification
-Step 7: /ship          → Tests pass → /guard safety check → push to branch → open PR
-Step 8: /retro         → Knowledge extraction (MANDATORY — cannot be skipped)
+Step 1: /office-hours  → Strategic problem framing
+Step 2: YOU APPROVE    → Approve feature proposal
+Step 3: /spec          → Generate 6-area SPEC.md
+Step 4: YOU APPROVE    → Human reviews and approves the spec
+Step 5: /ce-plan       → Detailed implementation plan (docs/plans/)
+Step 6: /build         → Git worktree isolation (auto-triggered)
+Step 7: /ship          → Tests + SAST + /guard → Release
+Step 8: /retro         → Knowledge extraction (MANDATORY)
 ```
 
 **The `/retro` workflow** (self-improvement terminus):
@@ -281,8 +281,17 @@ Skills live in `.agents/skills/`. Each has a `SKILL.md` file.
 | `ce-plan` | Execution | Multi-phase implementation planning |
 | `react-best-practices` | Execution | React/Next.js critical rules |
 | `using-git-worktrees` | Execution | Workspace isolation before file writes |
-| `security-scanning` | Review/QA | SAST integration patterns |
-| `spec-driven-development` | Governance | SDD workflow enforcement |
+| `security-scanning` | Review/QA | STRIDE + SAST pipeline integration |
+| `agent-browser` | Review/QA | Headless Chromium CDP core loop |
+| `ce-correctness-reviewer` | Review/QA | JSON-structured 3-persona logic review |
+| `ce-strategy` | Orchestration | STRATEGY.md grounding anchor |
+| `opportunity-solution-tree` | Orchestration | Teresa Torres OST framework |
+| `browse` | GStack | Persistent browser session daemon |
+| `office-hours` | GStack | YC-style strategic CEO diagnostic |
+| `codex` | GStack | Multi-AI verification for high-stakes decisions |
+| `careful` | GStack | Destructive operation review wrapper |
+| `guard` | GStack | Final execution gate + safety checklist |
+| `freeze` | GStack | Emergency circuit breaker / halt |
 
 ---
 

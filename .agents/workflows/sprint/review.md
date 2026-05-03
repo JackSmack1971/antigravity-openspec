@@ -65,26 +65,9 @@ Security-critical inspection:
 > Any CRITICAL finding → **HALT** → present to user immediately (User Sovereignty).
 
 ### Step 5 — Specialist Dispatch (Parallel Agents)
-```
-//parallel — invoke three specialist sub-agents simultaneously:
-
-[CORRECTNESS agent]
-- Mental execution of changed code paths
-- Off-by-one errors, null propagation, race conditions
-- Logic correctness vs. SPEC.md acceptance criteria
-- Returns: {verdict: PASS|FAIL|WARN, confidence: 0-100, findings: []}
-
-[SECURITY agent]
-- OWASP Top-10 scan on changed surface
-- STRIDE threat model on new trust boundaries
-- Returns: {verdict: PASS|FAIL|WARN, confidence: 0-100, findings: []}
-
-[MAINTAINABILITY agent]
-- Readability, coupling, cohesion
-- Test coverage gaps vs. changed lines
-- Documentation completeness
-- Returns: {verdict: PASS|FAIL|WARN, confidence: 0-100, findings: []}
-```
+[CORRECTNESS agent]: load `ce-correctness-reviewer` skill → run JSON-structured review.
+[SECURITY agent]: load `security-scanning` skill → run STRIDE gate (if auth/DB/API files changed).
+[MAINTAINABILITY agent]: scan for slop (console.log, TODO, FIXME, secrets).
 > Deduplicate overlapping findings across the three agents before Step 6.
 
 ### Step 6 — Fix-First (Auto or Ask)
@@ -101,14 +84,10 @@ For each finding (sorted: CRITICAL → FAIL → WARN):
 > Re-run Steps 3–4 after fixes to confirm resolution.
 
 ### Step 7 — Verification
-```
-- Confirm all CRITICAL and FAIL findings resolved
-- Run test suite: confirm no regressions introduced
-- Validate diff scope: no unintended files changed
-- Confirm SPEC.md acceptance criteria met
-- Generate review summary:
-  {files_changed, lines_added, lines_removed, findings_fixed, warnings_remaining}
-```
+- Confirm all findings resolved.
+- Re-run tests: `npm test` or equivalent.
+- UI Verification: load `agent-browser` skill → visual snapshot of changed UI (if applicable).
+- Output walkthrough artifact: `actions.md` with all changes made.
 > Hand off to `/qa` → `/ship` only when: 0 CRITICAL, 0 FAIL, confidence ≥ 85 on all agents.
 
 ## Quality Gates
