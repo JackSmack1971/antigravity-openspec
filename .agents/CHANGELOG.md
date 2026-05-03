@@ -1,7 +1,145 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Governance Skills Update
+### Added
+- `.agents/skills/governance/using-agent-skills/SKILL.md` (meta-discovery flowchart for task-to-skill mapping).
+
+### Skipped (GOLDEN RULE)
+- `.agents/skills/governance/planning-with-files/SKILL.md` — Existing file is highly mature (v2.36.3), contains all requested 3-file nucleus and 2-action rule mechanics.
+- `.agents/skills/governance/spec-driven-development/SKILL.md` — Existing file is mature, contains requested 6-area spec structure and human review gates.
+
+## [2026-05-03] - AGENTS.md Master Router v2026-05-full
+### Changed
+- Registered 22 additional slash commands (`/open`, `/qa`, `/ce-strategy`, `/ce-brainstorm`, `/ce-work`, `/opsx:apply`, `/opsx:sync`, `/opsx:archive`, `/opsx:new`, `/opsx:continue`, `/opsx:ff`, `/opsx:verify`, `/opsx:bulk-archive`, `/opsx:explore`, `/office-hours`, `/codex`, `/browse`, `/careful`, `/guard`, `/freeze`, `/discover` alias, `/restore-context`) in REGISTERED WORKFLOWS.
+- Enhanced `Stop` lifecycle hook: added `--dashboard` flag to `crystallization-tracker.py`, conditional `/retro` prompt on milestone complete, and Uplift% logging directive to `.agents/knowledge/self-improvement/`.
+- GOLDEN RULE applied to IMMUTABLE RULES: `@.agents/rules/01–07` already present (00–12 registered); no duplicate entries added.
+
+### Added
+- **POWER-CHAINS (auto-fire)** section after SELF-IMPROVEMENT TERMINUS: Chains A–F with full workflow sequences (distinct from existing Governance Triads table which is more mature and retained).
+- **SKILL REGISTRY** section (27 entries): Layer 1 metadata index mapping skill paths to descriptions across governance, execution, review-qa-security, orchestration, meta-ki, and gstack categories.
+
+## [2026-05-03] - Governance Audit: Full 13-Rule Set Verified (v2026-05-rules-audit)
+### Verified (GOLDEN RULE — no overwrites)
+- Audited `.agents/rules/` — all 13 rule files (00–12) confirmed present and more mature than spec.
+- Rules 01–05 (`spec-before-code`, `planning-memory`, `security-baseline`, `progressive-disclosure`, `ki-governance`) contain evolved content (STRIDE, 3-File Nucleus, CSO, YAML frontmatter descriptions) exceeding the requested spec. No overwrites applied.
+- Rules 06 (`terminal-execution`) and 07 (`visual-verification`) are the repository's evolved equivalents of the spec's `orchestration-safety` and `output-discipline` — retained as authoritative.
+- GOLDEN RULE applied: "If a better more mature file already exists, skip any modifications."
+
+## [2026-05-02] - ce-plan Level 4 Upgrade (v2026-05-ce-plan-l4)
+### Changed
+- Upgraded `.agents/skills/execution/ce-plan/SKILL.md` from Level 2 to Level 4: Added telegraphic phases, positive framing, and n-gram abbreviations (IU, AC, CS, DP).
+- Replaced the prose-based Phase 5 confidence gate with a deterministic black-box Python script (`scripts/validate-plan.py`).
+- Appended a `<ki_extraction>` block to enforce the `/retro` loop and continuous self-improvement.
+
+### Added
+- Created `.agents/skills/execution/ce-plan/scripts/validate-plan.py` for deterministic plan validation.
+- Created `.agents/skills/execution/ce-plan/examples/golden-plan.md` to provide a few-shot semantic scaffold.
+- Created `.agents/skills/execution/ce-plan/resources/plan-template.md` as the reusable markdown baseline.
+- Updated `plan-template.md` with detailed scaffolding (Status/CS tracking, formal IU definitions, table structures for Dependencies and Risks, and distinct plan-level vs IU-level Acceptance Criteria).
+- Updated `golden-plan.md` with a high-fidelity "Rate-Limiting Auth API" scenario, demonstrating proper IU abstraction, table formatting, and gap justification for CS < 100%.
+- Upgraded `validate-plan.py` to a robust script utilizing Regex extraction to ensure strict compliance (no absolute paths, Confidence Score >= 70, per-IU Acceptance Criteria) and returning standardized JSON stdout for deterministic agent handoff.
+
+## [2026-05-02] - Systematic Debugging Workflows Update (v2026-05-debug-workflows)
+### Added
+- Created `.agents/workflows/engineering/backward-root-cause-tracing.md` — Backward Root-Cause Tracing sequence: Deterministic data flow extraction integrating with find-polluter.sh.
+- Created `.agents/workflows/engineering/defense-in-depth-validation.md` — Defense-in-Depth Validation workflow: 4-layer safety check (Entry → Business Logic → Env Guards → Debug Instrumentation).
+- Created `.agents/workflows/engineering/condition-based-waiting.md` — Condition-Based Waiting routine: Flakiness elimination via predicate polling loops.
+
+### Changed
+- Renamed and upgraded `ce-debug.md` to `.agents/workflows/engineering/systematic-debugging.md` — `/systematic-debugging`: Enforced strict 4-Phase Procedure (Root Cause Investigation → Pattern Analysis → Hypothesis/Testing → Implementation) with architectural escalation triggers on 3+ failures.
+
+## [2026-05-02] - Security Scanning Workflows Update (v2026-05-security-workflows)
+### Added
+- Created `.agents/workflows/security/attack-tree-construction.md` — Attack tree construction sequence: Risk-prioritized logic block (Build → Add Nodes → Compute paths → JSON export → Visualization).
+- Created `.agents/workflows/security/sast-deployment.md` — SAST Tool Configuration & CI/CD Deployment: Procedural enforcement for automated scanning (Select → Configure → Integrate → Custom rules → Validate).
+
+### Changed
+- Upgraded `.agents/workflows/security/threat-model-pipeline.md` — `/security-threat-modeling-pipeline`: Explicitly detailed the interconnected 5-step defense-in-depth orchestration sequence.
+
+## [2026-05-02] - React Best Practices Workflows Update (v2026-05-react-workflows)
+### Added
+- Created `.agents/workflows/react/build-skill.md` — `/build-skill` workflow: Deterministic compilation flow (pnpm install → build → validate → extract-tests).
+- Created `.agents/workflows/react/create-new-rule.md` — `/create-new-rule` workflow: Exact template formatting rule authoring flow.
+- Created `.agents/workflows/react/react-skill-invocation.md` — Agent Skill Invocation workflow: Contextually triggered activation for React/Next.js domain tasks.
+
+## [2026-05-02] - PM-Skills Workflows Update (v2026-05-pm-workflows)
+### Added
+- Created `.agents/workflows/pm/marketplace-invocation.md` — Marketplace-wide Command Invocation Pattern: Cross-plugin methodology for fluid execution and handoffs.
+
+### Changed
+- Upgraded `.agents/workflows/pm/discover.md` — `/discover`: Explicitly structured the 7-step sequence (Understand context → Brainstorm → Identify assumptions → Prioritize → Design experiments → Create plan → Offer next steps).
+
+## [2026-05-02] - Planning with Files Workflows Update (v2026-05-planning-workflows)
+### Added
+- Created `.agents/workflows/engineering/planning-restore-context.md` — `/planning-restore-context` workflow: Mandatory state persistence sequence on session resume.
+- Created `.agents/workflows/engineering/planning-lifecycle-hooks.md` — `/planning-lifecycle-hooks` workflow: Matcher-based hooks (UserPromptSubmit, PreToolUse, PostToolUse, Stop) across the operational lifecycle.
+- Created `.agents/workflows/engineering/planning-core-pattern.md` — `/planning-core-pattern` workflow: 3-File Persistent Memory state-saving iteration loop (task_plan, progress, findings).
+
+## [2026-05-02] - OpenSpec Workflows Update (v2026-05-openspec-workflows)
+### Added
+- Created `.agents/workflows/openspec/opsx-core-quick-path.md` — Core Quick Path workflow: propose → apply → sync → archive.
+- Created `.agents/workflows/openspec/opsx-expanded-path.md` — Expanded Path workflow: new → continue/ff → apply → verify → archive/bulk-archive.
+- Created `.agents/workflows/openspec/opsx-explore.md` — `/opsx:explore` workflow: Non-structured thinking partner transitioning to proposal artifacts.
+
+### Changed
+- Upgraded `.agents/workflows/openspec/opsx-propose.md` — `/opsx:propose`: Formalized the 4-step AI generation sequence based on schema dependencies.
+
+## [2026-05-02] - Meta Skill Workflows Update (v2026-05-meta-workflows)
+### Added
+- Created `.agents/workflows/meta/skill-authoring-template.md` — `/skill-authoring-template` workflow: Enforces a progressive disclosure format for SKILL.md creation.
+- Created `.agents/workflows/meta/pressure-testing.md` — `/pressure-testing` workflow: Subagent-driven development for pressure testing SKILL.md compliance.
+
+### Changed
+- Upgraded `.agents/workflows/meta/writing-skills.md` — `/writing-skills`: Streamlined the TDD skill authoring sequence into a mandatory 6-step loop.
+
+## [2026-05-02] - Compound Engineering Workflows Update (v2026-05-ce-workflows)
+### Added
+- Created `.agents/workflows/engineering/ce-strategy.md` — `/ce-strategy` workflow: Upstream anchor for STRATEGY.md initialization.
+- Created `.agents/workflows/engineering/ce-brainstorm.md` — `/ce-brainstorm` workflow: Requirements brainstorming phase.
+- Created `.agents/workflows/engineering/ce-work.md` — `/ce-work` workflow: Execution and implementation phase.
+- Created `.agents/workflows/engineering/using-git-worktrees.md` — `/using-git-worktrees` workflow: 8-step deterministic clean workspace guarantee.
+
+### Changed
+- Upgraded `.agents/workflows/engineering/ce-plan.md` — `/ce-plan`: Detailed the 6 iterative phases explicitly (Phase 0 to Phase 5).
+- Upgraded `.agents/workflows/engineering/ce-code-review.md` — `/ce-code-review`: Explicitly defined handoff criteria to `/ce-compound` or `/ce-polish-beta`.
+- Upgraded `.agents/workflows/engineering/ce-debug.md` — `/ce-debug`: Structured exactly to a 4-step sequence (Reproduce failures → trace root cause → form testable hypotheses → implement test-first fixes).
+- Upgraded `.agents/workflows/engineering/ce-compound.md` — `/ce-compound`: Explicitly represented as the final phase of the continuous core loop.
+
+## [2026-05-02] - Agent Skills Workflow Suite (v2026-05-agent-skills-v1)
+### Added
+- Created `.agents/workflows/engineering/development-lifecycle.md` — `/dev-lifecycle` workflow: Full development lifecycle (DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP).
+- Created `.agents/workflows/engineering/spec-driven-development.md` — `/sdd` workflow: Internal spec-driven gated workflow for tracking living documents.
+- Created `.agents/workflows/engineering/skill-orchestration.md` — `/orchestrate` workflow: Skill invocation & orchestration with parallel fan-out personas.
+
+### Changed
+- Upgraded `.agents/workflows/sprint/spec.md` — `/spec`: Added mandatory human review gate and 6-area generation sequence.
+
+## [2026-05-02] - Gstack Sprint Workflow Suite (v2026-05-gstack-sprint-v1)
+### Added
+- Created `.agents/workflows/sprint/sprint.md` — `/sprint` workflow: canonical Think-Plan-Build-Review-Test-Ship-Reflect sprint lifecycle; phase map with `/office-hours → /plan-ceo-review → /spec → build → /review → /qa → /ship → /retro`; guardrail interrupt table (`/freeze`, `/guard`, 3-Strike). (Workflows Refs §1, Workflow 4)
+- Created `.agents/workflows/sprint/skill-routing.md` — `/skill-routing` workflow: session-init request-type dispatcher; 15-row intent→role→workflow routing table; Power-Chain routing diagram (Chains A–G); anti-rationalization guardrail table. (Workflows Refs §1, Workflow 5)
+
+### Changed (upgraded stubs to full gstack spec)
+- Upgraded `.agents/workflows/sprint/autoplan.md` — `/autoplan`: expanded stub (9 lines) to full gstack sprint pipeline; added CEO review, design review, eng review, DX review phases; 4 User Sovereignty Checkpoints; guardrail interrupt section. (Workflows Refs §1, Workflow 1)
+- Upgraded `.agents/workflows/sprint/review.md` — `/review`: expanded stub (5 lines) to full PR review + fix loop; 7-step sequence (detect→diff→slop→critical→parallel-dispatch→fix-first→verify); `/browse` skill dependency; parallel 3-agent specialist dispatch with confidence gating. (Workflows Refs §1, Workflow 2)
+- Upgraded `.agents/workflows/sprint/ship.md` — `/ship`: expanded stub (5 lines) to full release workflow; strict `/guard` dependency; `/land-and-deploy` and `/canary` integration; stale review detection; mandatory `/retro` terminus. (Workflows Refs §1, Workflow 3)
+- Updated `AGENTS.md` lifecycle hook: `UserPromptSubmit` now chains `/skill-routing` before plan injection; registered `/sprint` and `/skill-routing` in REGISTERED WORKFLOWS.
+
+## [2026-05-02] - Browser Automation Workflow Suite (v2026-05-browser-workflows-v1)
+### Added
+
+- Created `.agents/workflows/browser/core-loop.md` — `/core-loop` workflow: CDP referential DOM validation via snapshot-and-ref loop. Enforces mandatory re-snapshot after every page state change. (Audit Report §2, Workflow 1)
+- Created `.agents/workflows/browser/quickstart-batch.md` — `/quickstart-batch` workflow: Multi-command serialization via `agent-browser batch`; supports inline string args and JSON stdin with `--bail` fail-fast mode. (Audit Report §2, Workflow 2)
+- Created `.agents/workflows/browser/login.md` — `/login` workflow: Auth vault credential orchestration isolating PII from shell history; chains `auth save → open → auth login → wait --url → snapshot -i`. (Audit Report §2, Workflow 3)
+- Created `.agents/workflows/browser/state-persist.md` — `/state-persist` workflow: Session bridging paradigm for cross-run restore via `state save ./auth.json` and `--state` flag or `AGENT_BROWSER_SESSION_NAME` env. (Audit Report §2, Workflow 4)
+- Created `.agents/workflows/browser/specialized-load.md` — `/specialized-load` workflow: Domain context shifting via `agent-browser skills get <domain>`; covers electron/slack/dogfood/vercel-sandbox/agentcore. (Audit Report §2, Workflow 5)
+
+### Changed
+- Upgraded Master Router (`AGENTS.md`) to **v2026-05-browser-workflows-v1**: registered all 5 browser workflows, expanded Power-Chain table from 5 to 6 chains with new **Chain G: Browser Automation** (Rules 03, 07 → /core-loop → /login → /state-persist).
+
 ## [2026-05-02] - Session Continuity Hardening & Script Path Fixes (v2026-05-continuity-v1)
 ### Fixed
+
 - **Critical**: Fixed CWD-relative path bug in all 3 Python scripts (`crystallization-tracker.py`, `check-complete.py`, `session-catchup.py`). All scripts now use `os.path.abspath(__file__)` to resolve workspace root, preventing failures when called from any working directory on Windows (Rule 11.5).
 
 ### Added

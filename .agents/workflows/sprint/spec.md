@@ -4,11 +4,19 @@ description: Use when starting a new codebase change. Generates the 6-area SPEC.
 ---
 # /spec — 6-Area Specification
 
-1. Objective + success criteria
-2. Features + user stories (Given/When/Then)
-3. Tech stack + dependencies
-4. Architecture decisions + tradeoffs
-5. Boundaries (Always/Ask/Never)
-6. Verification evidence + test acceptance criteria
+## Sequence
+1. **Understand user intent** — Read the prompt and codebase context.
+2. **Ask clarifying questions** — Objective, features, tech stack, and boundaries.
+3. **Generate SPEC.md** — Cover the six core areas:
+    - **Objective**: Problem statement and success criteria.
+    - **Commands**: UI/CLI interactions and expected behaviors.
+    - **Structure**: File layout and architectural decisions.
+    - **Style**: Aesthetic and code quality standards.
+    - **Testing**: Verification evidence and acceptance criteria.
+    - **Boundaries**: Always/Ask-First/Never constraints.
+4. **Save to repo root** — Write `SPEC.md` to the current workspace root.
+5. **Confirm with human** — Wait for explicit approval before proceeding to any implementation.
 
-Human MUST review + approve SPEC.md before Phase 2 begins.
+## Mandatory Human Review Gate
+- No implementation code may be written until `SPEC.md` is approved.
+- Triggers on the start of any significant codebase change.
