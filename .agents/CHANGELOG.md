@@ -1,5 +1,10 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - README.md Comprehensive Upgrade
+
+### Changed
+- `README.md`: Full rewrite to reflect complete repo state (Rules, Workflows, Skills, Architecture, CI/CD).
+
 ## [2026-05-03] - Artifacts Directory + CI Stubs
 
 ### Added
