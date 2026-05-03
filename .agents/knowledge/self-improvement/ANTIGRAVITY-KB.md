@@ -3,6 +3,7 @@
 This Knowledge Item serves as the master index for the Antigravity production engineering framework (v2026-05). Monolithic content has been defragmented into modular KIs for optimal context discovery.
 
 ## 1. Core Architecture & Governance
+- [Repo Architecture Decisions](file:///.agents/knowledge/references/repo_architecture_decisions.md): Decisions made in v2026-05 upgrade.
 - [Sub-Agent Architecture](file:///.agents/knowledge/references/subagent_architecture.md): Mechanics of Planner, Terminal, and Browser agents.
 - [Conflict Resolution & Precedence](file:///.agents/knowledge/playbooks/conflict_resolution.md): Rule activation modes and the precedence matrix.
 - [Progressive Disclosure](file:///.agents/knowledge/playbooks/progressive_disclosure.md): Activation mechanics for Agent Skills.
@@ -18,6 +19,7 @@ This Knowledge Item serves as the master index for the Antigravity production en
 
 ## 3. Extension Protocols
 - [MCP Integration & Configuration](file:///.agents/knowledge/references/mcp_integration.md): Secure bridge to external tools (Context7, GitHub, Filesystem).
+- [Upgrade Bootstrap Ordering](file:///.agents/knowledge/pitfalls/upgrade_bootstrap_ordering.md): Correct sequence for new repo bootstrapping.
 - [Path Resolution Pitfalls](file:///.agents/knowledge/pitfalls/path_resolution_pitfalls.md): Handling filesystem access errors on Windows.
 - [Session Continuity Failure](file:///.agents/knowledge/pitfalls/session_continuity_failure.md): Preventing repeated bootstrapping loops across sessions (18+ hit trigger).
 

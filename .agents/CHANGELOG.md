@@ -1,5 +1,21 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Self-Improvement Baseline Established
+
+### Added
+- `.agents/knowledge/references/repo_architecture_decisions.md` (architectural decision record)
+- `.agents/knowledge/pitfalls/upgrade_bootstrap_ordering.md` (bootstrap order pitfall)
+
+### Changed
+- `.agents/knowledge/self-improvement/ANTIGRAVITY-KB.md`: Added 2 new KI references.
+
+### Metrics
+- Uplift% baseline: 84.62%
+- Total KIs: 32
+- Total rules: 13
+- Total workflows: 15 (core)
+- Total skills: 27
+
 ## [2026-05-03] - Integration Validation Pass
 
 ### Verified

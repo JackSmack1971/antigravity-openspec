@@ -167,9 +167,10 @@ The framework maintains continuity across context window resets via the **3-File
 
 ## Self-Improvement Loop
 
-The framework's most critical component. Every release must terminate with a `/retro`.
+Every `/ship` or `/ce-compound` must terminate with a `/retro`.
 - **Extraction**: The Knowledge Subagent identifies **Pitfalls** (errors to avoid) and **Playbooks** (patterns to repeat).
 - **Tracking**: Autonomy Uplift% metrics are logged to `metrics.json` and visualized via `crystallization-tracker.py --dashboard`.
+- **Baseline**: Established 2026-05-03 with **84.62% Aggregate Uplift%**.
 
 ## Conflict Resolution Precedence
 
