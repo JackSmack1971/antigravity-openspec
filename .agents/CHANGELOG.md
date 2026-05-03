@@ -1,5 +1,13 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Engineering Workflows Created
+
+### Added
+- `.agents/workflows/engineering/ce-plan.md`
+- `.agents/workflows/engineering/ce-debug.md`
+- `.agents/workflows/engineering/ce-code-review.md`
+- `.agents/workflows/engineering/ce-compound.md`
+
 ## [2026-05-03] - Sprint Workflows Hardened
 ### Added
 - `.agents/workflows/sprint/autoplan.md` (full sprint pipeline aligned with GStack office-hours).

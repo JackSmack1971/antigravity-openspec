@@ -207,7 +207,7 @@ Rule 03 (Security) > Rule 00 (Constitution) > Rules 01-12 > Skills > Workflows
 |---|---|---|
 | **A: Feature Build** | You request a new feature | `/autoplan` → `/spec` → `/ce-plan` → `/ship` |
 | **B: Security** | Pre-release check | `/security-threat-modeling-pipeline` |
-| **C: Debug** | You report a bug | `/ce-debug` → `/systematic-debugging` |
+| **C: Debug** | You report a bug | `/ce-debug` → `/ce-code-review` → `/retro` |
 | **D: PM Discovery** | A decision is needed | `/discover` → `/opsx:propose` |
 | **E: Skill Authoring** | A capability gap is found | `/writing-skills` (TDD cycle) |
 | **F: Context Resilience** | Context window is getting large | `/para-knowledge` → `/ce-compound` |
@@ -219,6 +219,15 @@ Rule 03 (Security) > Rule 00 (Constitution) > Rules 01-12 > Skills > Workflows
 > **Plain English:** Type one of these "slash commands" to kick off a defined procedure.
 
 Workflows are Markdown files in `.agents/workflows/`. Each one is a numbered checklist the agent follows step-by-step, in order, without skipping.
+
+| Workflow | Chain | Description |
+|---|---|---|
+| `/autoplan` | **A** | Full sprint pipeline: spec → build → ship → retro |
+| `/ce-plan` | **A** | Multi-phase implementation planning |
+| `/ce-debug` | **C** | Systematic 4-phase root-cause debugging |
+| `/ce-code-review` | **C** | Multi-persona tiered quality gate |
+| `/ce-compound` | **F** | Learning documentation + context reset |
+| `/retro` | **A/F** | Self-improvement knowledge extraction |
 
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 

@@ -1,22 +1,14 @@
 ---
 name: ce-plan
-description: Multi-phase planning workflow. Always triggered upon direct invocation to prevent abandonment, iterating through 6 phases.
+description: Multi-phase compound engineering planning. Steps 1-9 cover STRATEGY.md check, ce-plan skill load, Phase 0-5 iteration, and task_plan.md update.
 ---
 # /ce-plan — Multi-Phase Planning
-
-## Purpose
-A multi-phase planning workflow that is always triggered upon direct invocation to prevent abandonment. It iterates through a strict sequence to generate a concrete implementation plan.
-
-## Core Principles
-- **Repo-relative paths only:** All references to files must use paths relative to the repository root.
-- **Decisions-not-code:** Focus on architectural decisions and data flow, not writing the actual code implementation.
-- **Output Artifacts:** Store generated plans in the `docs/plans/` directory.
-
-## Planning Phases
-The workflow MUST iterate through these phases sequentially:
-1. **Phase 0 (Resume/Source/Scope):** Load context, determine the scope of work, and resume any prior state.
-2. **Phase 1 (Context/Research):** Perform necessary repository searches, read required KIs, and gather deep context.
-3. **Phase 2 (Questions):** Identify ambiguities and formulate clarifying questions if user input is needed.
-4. **Phase 3 (Structure):** Define the architectural structure and module boundaries.
-5. **Phase 4 (Write plan):** Write the detailed plan to `docs/plans/`.
-6. **Phase 5 (Review/Confidence Check/Handoff):** Perform a final confidence check against `STRATEGY.md` and hand off to `/ce-work` for execution.
+1. **Check if STRATEGY.md exists** → read it; if not, trigger /ce-strategy first
+2. **Load ce-plan skill** (Layer 2)
+3. **Phase 0: RESUME** — read task_plan.md; list remaining tasks
+4. **Phase 1: CONTEXT** — read relevant source files; extract existing patterns
+5. **Phase 2: QUESTIONS** — surface ambiguities; HALT for user answers
+6. **Phase 3: STRUCTURE** — define component map (repo-relative paths only)
+7. **Phase 4: WRITE** — generate docs/plans/<name>.md
+8. **Phase 5: REVIEW GATE** — present plan; HALT for user approval
+9. **Post-approval**: initialize task_plan.md if new plan; update if continuing

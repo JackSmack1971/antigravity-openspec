@@ -1,59 +1,14 @@
 ---
 name: ce-code-review
-description: 3-persona tiered code review with confidence gating. Blocks ship if any persona fails. Handoff to /ce-compound or /ce-polish-beta. Slash command: /ce-code-review
+description: Multi-persona code review (CORRECTNESS, SECURITY, MAINTAINABILITY). Blocks ship on FAIL. Includes security scanning and React best practices audits.
 ---
-# /ce-code-review — 3-Persona Tiered Review
-
-## Precondition
-Requires: SPEC.md (for CORRECTNESS acceptance criteria baseline).
-Requires: implementation diff or PR reference.
-
-## Step 1: Fan-out (//parallel — all 3 simultaneously)
-
-**CORRECTNESS** (@apex-reviewer):
-Mental execution of code. Check: off-by-one errors, null/undefined propagation, race conditions,
-error propagation paths, state machine transitions, async error handling.
-
-**SECURITY** (@apex-security-officer):
-Trust boundary violations, SQL/XSS/command injection, hardcoded secrets,
-missing authentication/authorization, OWASP top-10, insecure direct object references.
-
-**MAINTAINABILITY** (@apex-reviewer):
-Readability, tight coupling, single responsibility violations, dead code,
-insufficient test coverage, unclear naming, missing error messages.
-
-Each returns: `{reviewer, verdict: PASS|FAIL|WARN, confidence: 0-100, findings: []}`
-
-## Step 2: Confidence Gate Gate: STRICT_MODE
-All PASS with confidence ≥ 85 → proceed to Step 3.
-Any FAIL → route to @apex-engineer + /ce-debug. Provide structured findings.
-Any WARN with confidence < 85 → request specific clarification. Do not block, but flag.
-Max 3 review-fix iterations. After 3: escalate to user with all findings across iterations.
-
-## Step 3: Deduplication
-Identify overlapping findings across all 3 personas.
-Consolidate into single structured report. Remove duplicate findings; keep most specific description.
-
-## Step 4: Slop Scan
-Check for: vague implementations, TODO comments in production code,
-copy-paste artifacts (repeated logic blocks), incomplete error handling (bare `catch {}`),
-magic numbers without named constants.
-Any slop found → return to @apex-engineer for cleanup BEFORE PASS issued.
-
-## Output Format
-```json
-{
-  "verdict": "PASS|FAIL",
-  "personas": [
-    {"reviewer": "CORRECTNESS", "verdict": "PASS", "confidence": 92, "findings": []},
-    {"reviewer": "SECURITY", "verdict": "PASS", "confidence": 88, "findings": []},
-    {"reviewer": "MAINTAINABILITY", "verdict": "PASS", "confidence": 90, "findings": []}
-  ],
-  "consolidated_findings": [],
-  "slop_detected": false
-}
-```
-
-## Success Criteria & Handoff
-All 3 personas: PASS, confidence ≥ 85. Slop = 0. Consolidated report generated.
-Upon success, hand off execution explicitly to `/ce-compound` (to document learnings) or `/ce-polish-beta` (for final polish).
+# /ce-code-review — Multi-Persona Review
+1. **Load ce-correctness-reviewer skill (Layer 2)**
+2. **Run 3-persona review** (logic → behavioral → concurrency)
+3. **Output JSON review artifact** to .agents/artifacts/review_<timestamp>.json
+4. **If verdict=FAIL**: block /ship; present fix list to user; HALT
+5. **If verdict=WARN**: present warnings; user decision gate
+6. **Load security-scanning skill** if: auth / database / API / infra files changed
+7. **Security gate**: MitigationPlan coverage must be ≥ 0.8 (Rule 03)
+8. **Load react-best-practices skill** if: .tsx/.jsx files changed; self-audit CRITICAL rules
+9. **Final**: output walkthrough summary to .agents/artifacts/review_summary.md

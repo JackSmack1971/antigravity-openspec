@@ -1,13 +1,14 @@
 ---
 name: ce-compound
-description: Final step of the CE core loop. Documents learnings and resets the engineering loop with compounded context.
+description: Learning documentation and loop reset. Triggers /retro, extracts KIs, updates crystallization dashboard, and resets task_plan.md.
 ---
-# /ce-compound — Learning Documentation & Compounding
-
-## Purpose
-The final phase of the continuous execution loop: `/ce-brainstorm → /ce-plan → /ce-work → /ce-code-review → /ce-compound`.
-
-## Execution
-1. **Collect Findings:** Gather insights from `findings.md` and the `ce-code-review` artifacts.
-2. **Compound Context:** Update persistent project context (Knowledge Items in `.agents/knowledge/`) to ensure the next iteration of the loop is smarter.
-3. **Repeat/Reset:** Reset the engineering loop or invoke `/retro` if the initiative is complete.
+# /ce-compound — Learning Documentation & Loop Reset
+1. **Run /retro workflow (full)** → capture all KI candidates
+2. **Extract**: all architectural decisions from this session → Architecture KI
+3. **Extract**: all new patterns discovered → Pattern KI
+4. **Run `python .agents/scripts/crystallization-tracker.py --dashboard`**
+5. **Update STRATEGY.md** if any strategic pivots occurred
+6. **Reset task_plan.md** for next compound cycle (archive current to docs/archive/)
+7. **Update AGENTS.md version timestamp** if any framework changes were made
+8. **Log**: "Compound cycle complete. Context reset. Uplift%: [X]%"
+9. **Output**: compound-learning-summary.md to .agents/artifacts/
