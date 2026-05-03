@@ -1,5 +1,12 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Governance Audit: Full 13-Rule Set Verified (v2026-05-rules-audit)
+### Verified (GOLDEN RULE — no overwrites)
+- Audited `.agents/rules/` — all 13 rule files (00–12) confirmed present and more mature than spec.
+- Rules 01–05 (`spec-before-code`, `planning-memory`, `security-baseline`, `progressive-disclosure`, `ki-governance`) contain evolved content (STRIDE, 3-File Nucleus, CSO, YAML frontmatter descriptions) exceeding the requested spec. No overwrites applied.
+- Rules 06 (`terminal-execution`) and 07 (`visual-verification`) are the repository's evolved equivalents of the spec's `orchestration-safety` and `output-discipline` — retained as authoritative.
+- GOLDEN RULE applied: "If a better more mature file already exists, skip any modifications."
+
 ## [2026-05-02] - ce-plan Level 4 Upgrade (v2026-05-ce-plan-l4)
 ### Changed
 - Upgraded `.agents/skills/execution/ce-plan/SKILL.md` from Level 2 to Level 4: Added telegraphic phases, positive framing, and n-gram abbreviations (IU, AC, CS, DP).
