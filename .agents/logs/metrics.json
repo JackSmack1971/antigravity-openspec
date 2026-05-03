@@ -11,8 +11,22 @@
             "wins": 1,
             "interventions": 0,
             "uplift": 100.0
+        },
+        {
+            "timestamp": "2026-05-03T10:19:04.977322",
+            "wins": 10,
+            "interventions": 0,
+            "uplift": 100.0,
+            "chain": "A"
+        },
+        {
+            "timestamp": "2026-05-03T10:19:12.991513",
+            "wins": 17,
+            "interventions": 0,
+            "uplift": 100.0,
+            "chain": "A"
         }
     ],
     "total_interventions": 2,
-    "total_wins": 11
+    "total_wins": 38
 }

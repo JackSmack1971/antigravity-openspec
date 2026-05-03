@@ -1,33 +1,16 @@
----
-session: [INITIALIZE ON FIRST USE]
-goal: [SET ON TASK START]
-phase: [current phase name]
-started: [ISO date]
----
-# Task Plan
+# Task Plan — RC Finalization Pressure Test
 
-## Current Goal
-[Set by agent at task start — 1 sentence, includes success criteria]
+## Goal
+Implement "Power-Chain Uplift Breakdown" in `crystallization-tracker.py` to drive Autonomy Uplift to 95% and validate the full APEX sprint lifecycle.
 
-## Phase Breakdown
-### Phase 1: [Name]
-- [ ] Step 1
-- [ ] Step 2
+## Status
+- **Current Phase**: Phase 0 (Diagnostic)
+- **Confidence Score (CS)**: 100%
 
-### Phase 2: [Name]
-- [ ] Step 1
-
-## Decisions Log
-| Decision | Rationale | Date |
-|---|---|---|
-
-## Blockers
-| Blocker | Status | Resolution |
-|---|---|---|
-
-## Files Modified This Session
-| File | Change | Phase |
-|---|---|---|
-
----
-*Auto-updated by planning-with-files skill. Read head -50 on session start.*
+## Tasks
+- [ ] Phase 0: Diagnostic & Strategy Alignment
+- [ ] Phase 1: Feature Proposal & Spec
+- [ ] Phase 2: Implementation Planning (/ce-plan)
+- [ ] Phase 3: Build & Verification
+- [ ] Phase 4: Review & Ship
+- [ ] Phase 5: Retro & Knowledge Extraction

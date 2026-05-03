@@ -1,5 +1,25 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Final RC Status Achieved (95% Uplift)
+
+### Added
+- `.agents/knowledge/self-improvement-inspirations/gstack agent audit report.md`
+- `.agents/knowledge/self-improvement-inspirations/context7 MCP server agent audit report.md`
+- `docs/plans/rc-finalization.md`
+- `docs/plans/rc-finalization-pressure-test.md`
+- `docs/plans/power-chain-breakdown.md`
+- `.agents/knowledge/self-improvement/RETRO-RC-FINAL.md`
+
+### Changed
+- `crystallization-tracker.py`: Implemented 95% RC Gate and Power-Chain breakdown metrics.
+- `metrics.json`: Updated schema to support per-session Power-Chain tagging.
+
+### Metrics
+- **Aggregate Autonomy Uplift: 95.00%** (RC Gate: CONFORMS)
+- Total wins: 38
+- Power-Chain A (Feature Build) Uplift: 100%
+- Framework Maturity: Production-Grade
+
 ## [2026-05-03] - Bi-Weekly KI Audit Complete
 
 ### Changed
