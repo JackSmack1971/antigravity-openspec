@@ -1,5 +1,12 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Orchestration Skills: ce-strategy + opportunity-solution-tree
+### Added
+- `.agents/skills/orchestration/ce-strategy/SKILL.md` (STRATEGY.md anchor for compound engineering).
+
+### Changed
+- `.agents/skills/orchestration/opportunity-solution-tree/SKILL.md`: Surgically updated to include `/opsx:propose` integration and mandatory archival to `.agents/knowledge/context/`.
+
 ## [2026-05-03] - Review/QA Skills: ce-correctness-reviewer + agent-browser
 ### Added
 - `.agents/skills/review-qa-security/ce-correctness-reviewer/SKILL.md` (JSON-structured 3-persona logic review).

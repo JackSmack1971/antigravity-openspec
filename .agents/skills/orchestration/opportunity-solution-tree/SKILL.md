@@ -19,8 +19,10 @@ allowed-tools: Read, Write
 2. Map Opportunities — brainstorm customer needs/pain points. NO solutions yet.
 3. Prioritize Opportunities — impact vs evidence quality vs strategic alignment matrix.
 4. Generate Solutions — minimum 3 per priority opportunity. Include wild/unconventional options.
-5. Design Experiments — map riskiest assumption per solution → test design → evidence threshold.
-6. Visualize Tree — markdown hierarchy: Outcome → Opportunities → Solutions → Experiments.
+5. Design Experiments — map riskiest assumption per solution → test design (Given/When/Then) → evidence threshold.
+6. Select & Feed — choose the top experiment to feed into the `/opsx:propose` workflow.
+7. Archive Tree — save the resulting OST to `.agents/knowledge/context/<slug>-ost.md`.
+8. Visualize Tree — markdown hierarchy: Outcome → Opportunities → Solutions → Experiments.
 
 ## OST Template
 ```markdown
@@ -40,5 +42,7 @@ allowed-tools: Read, Write
 
 ## Quality Gates
 - [ ] Single measurable outcome with metric defined
-- [ ] ≥ 3 solutions documented per prioritized opportunity with experiments
+- [ ] ≥ 3 solutions documented per prioritized opportunity with Given/When/Then experiments
+- [ ] Top experiment fed into `/opsx:propose`
+- [ ] Final OST archived to `.agents/knowledge/context/`
 - [ ] Process adheres to L0 Foundational Rules (GOAL-DRIVEN)
