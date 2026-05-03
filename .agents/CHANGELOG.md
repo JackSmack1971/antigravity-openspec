@@ -1,5 +1,14 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Gstack Safety Toolkit Skills
+### Added
+- `.agents/skills/gstack/browse/SKILL.md` (persistent browser session).
+- `.agents/skills/gstack/office-hours/SKILL.md` (YC-style diagnostic).
+- `.agents/skills/gstack/codex/SKILL.md` (multi-AI verification).
+- `.agents/skills/gstack/careful/SKILL.md` (destructive op review).
+- `.agents/skills/gstack/guard/SKILL.md` (final execution gate).
+- `.agents/skills/gstack/freeze/SKILL.md` (emergency circuit breaker).
+
 ## [2026-05-03] - Orchestration Skills: ce-strategy + opportunity-solution-tree
 ### Added
 - `.agents/skills/orchestration/ce-strategy/SKILL.md` (STRATEGY.md anchor for compound engineering).
