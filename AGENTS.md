@@ -1,6 +1,6 @@
 ---
 title: Antigravity Master Router (APEX)
-version: 2026-05-path-hardened-v3
+version: 2026-05-path-hardened-v3 (Updated 2026-05-03)
 description: Single entry point. Loads Rules. Registers Workflows. Hardened for Path (Trust Anchor) & Context Resilience (Proactive Consolidation).
 ---
 

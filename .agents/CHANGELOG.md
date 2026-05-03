@@ -1,5 +1,19 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Compound Cycle Complete
+
+### Changed
+- `STRATEGY.md`: Created foundational anchor document.
+- `AGENTS.md`: Updated version timestamp (v2026-05-full).
+- `progress.md` / `task_plan.md`: Archived to `docs/archive/` and reset for next cycle.
+
+### Added
+- `.agents/artifacts/compound-learning-summary.md`
+
+### Metrics
+- Compound cycle complete. Context reset. 
+- Uplift%: 84.62%
+
 ## [2026-05-03] - Self-Improvement Baseline Established
 
 ### Added
