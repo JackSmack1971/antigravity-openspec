@@ -1,5 +1,10 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - KI Curator Skill + Archive Directory
+### Added
+- `.agents/skills/governance/ki-curator/SKILL.md` (SemVer+archive governance for KI lifecycle).
+- `.agents/knowledge/archive/.gitkeep` (archive directory for superseded KIs).
+
 ## [2026-05-03] - Governance Skills Update
 ### Added
 - `.agents/skills/governance/using-agent-skills/SKILL.md` (meta-discovery flowchart for task-to-skill mapping).
