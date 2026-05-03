@@ -1,1 +1,19 @@
 .agents/mcp_config.json
+
+# Antigravity runtime artifacts (ephemeral — do not commit)
+.agents/artifacts/
+progress.md
+.agents/artifacts/browser-state.json
+FREEZE_REPORT.md
+
+# Planning memory (session-specific — do not commit across sessions)
+# NOTE: task_plan.md IS committed as template; runtime content is local
+# findings.md IS committed as template; runtime content is local
+docs/archive/
+
+# Security
+.env
+.env.*
+*.key
+*.pem
+secrets/

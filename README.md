@@ -256,6 +256,16 @@ The APEX framework utilizes the Model Context Protocol (MCP) to extend agent cap
 - **Credentials**: All sensitive credentials (tokens, API keys) use `${ENV_VAR}` substitution to prevent accidental commitment of secrets.
 - **Security**: Model Armor is enabled for all remote HTTP/SSE servers to enforce read-only access and safety constraints.
 
+---
+
+### Session Persistence
+
+The APEX framework implements high-fidelity session persistence via the "Planning-with-Files" methodology.
+
+- **Nucleus**: `task_plan.md` (phases and goals), `findings.md` (research results), and `progress.md` (runtime logs) form the persistent working memory.
+- **Rule 02**: Mandates the use of these files to survive context window loss.
+- **Governance**: Managed by the `planning-with-files` skill to ensure the agent always has a canonical source of truth for the current task state.
+
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 
 ```

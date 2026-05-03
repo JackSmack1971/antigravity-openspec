@@ -1,5 +1,16 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Persistent Memory Templates + Gitignore Hardening
+
+### Added
+- `task_plan.md` (persistent working memory template)
+- `findings.md` (research findings template)
+- `docs/archive/.gitkeep`
+- `docs/plans/.gitkeep`
+
+### Changed
+- `.gitignore`: added `.agents/artifacts/`, `FREEZE_REPORT.md`, runtime session files
+
 ## [2026-05-03] - MCP Server Registry
 
 ### Added
