@@ -1,5 +1,11 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - MCP Server Registry
+
+### Added
+- `.agents/mcp_config.json` (GitHub, Filesystem, Context7, Postman, Database stubs)
+Note: database server disabled by default; enable per-project with DB_CONNECTION_STRING
+
 ## [2026-05-03] - OpenSpec Project Integration Layer
 
 ### Added

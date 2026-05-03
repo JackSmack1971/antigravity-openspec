@@ -1,42 +1,65 @@
 {
+  "_comment": "Antigravity MCP Server Registry — v2026-05",
+  "_security": "Model Armor enabled for all remote HTTP/SSE. Read-only by default. No API keys here — use environment variables.",
+  "_doc": "Add servers here. All remote servers require trust: 'remote'. Local stdio servers use trust: 'local'.",
   "mcpServers": {
     "github": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": { "GITHUB_TOKEN": "${GITHUB_TOKEN}" },
-      "trust": "read-only",
-      "justification": "PR creation, branch management, issue tracking. Write ops require /guard confirmation."
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "trust": "local",
+      "permissions": "read-write",
+      "description": "GitHub repo operations: PR creation, issue management, file reads",
+      "model_armor": false
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"],
-      "trust": "read-only",
-      "justification": "Default read-only workspace access. Write ops require explicit /guard wrapper."
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${WORKSPACE_ROOT}"],
+      "trust": "local",
+      "permissions": "read-only",
+      "description": "Read-only filesystem access for cross-repo KI lookup",
+      "model_armor": false
     },
     "context7": {
-      "command": "npx",
-      "args": ["-y", "@context7/mcp-server"],
-      "trust": "read-only",
-      "justification": "Up-to-date library documentation lookup. Pure read — no mutation capability."
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "trust": "remote",
+      "permissions": "read-only",
+      "description": "Up-to-date library documentation lookup",
+      "model_armor": true
     },
-    "sequential-thinking": {
+    "postman": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-      "trust": "read-only",
-      "justification": "Complex multi-step reasoning chains for ce-plan and systematic-debugging. Pure cognition."
+      "args": ["-y", "@modelcontextprotocol/server-postman"],
+      "env": {
+        "POSTMAN_API_KEY": "${POSTMAN_API_KEY}"
+      },
+      "trust": "local",
+      "permissions": "read-only",
+      "description": "API spec and collection access for integration testing",
+      "model_armor": false
+    },
+    "database": {
+      "_disabled": true,
+      "_comment": "Enable per-project. Set connection string via DB_CONNECTION_STRING env var.",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "DB_CONNECTION_STRING": "${DB_CONNECTION_STRING}"
+      },
+      "trust": "local",
+      "permissions": "read-only",
+      "description": "Database inspection — STRICTLY read-only. Load DB KI before querying.",
+      "model_armor": false
     }
   },
-  "security": {
-    "model_armor": true,
-    "strict_mode": true,
-    "iam_deny_defaults": ["delete-*", "push-force", "schema-drop", "env-*", "key-*"],
-    "turbo_justification_required": true,
-    "prompt_injection_defense": true,
-    "browser_separate_profile": true,
-    "localhost_only_http": true
-  },
-  "quota": {
-    "model_credit_overages": "ask",
-    "refresh_cycle_hours": 5
+  "globalSettings": {
+    "timeout_seconds": 30,
+    "max_retries": 3,
+    "log_level": "warn",
+    "deny_write_on_remote": true,
+    "require_model_armor_for_http_sse": true
   }
 }

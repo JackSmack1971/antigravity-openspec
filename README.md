@@ -246,6 +246,16 @@ OpenSpec is the spec-driven governance layer for Antigravity. It uses a structur
 - **Schema**: `openspec/schemas/spec-driven/schema.yaml` defines the Antigravity-native artifact dependency graph.
 - **Commands**: `/opsx:propose` kicks off a new change by injecting project context and rules directly into the AI's generation prompt.
 
+---
+
+### MCP Integration
+
+The APEX framework utilizes the Model Context Protocol (MCP) to extend agent capabilities via specialized servers.
+
+- **Registry**: `.agents/mcp_config.json` serves as the canonical server registry.
+- **Credentials**: All sensitive credentials (tokens, API keys) use `${ENV_VAR}` substitution to prevent accidental commitment of secrets.
+- **Security**: Model Armor is enabled for all remote HTTP/SSE servers to enforce read-only access and safety constraints.
+
 **The most important workflow — `/autoplan`** (Chain A, full feature delivery):
 
 ```
