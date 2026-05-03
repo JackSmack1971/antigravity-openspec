@@ -112,10 +112,10 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 ---
 
 ## LIFECYCLE HOOKS
-UserPromptSubmit → /skill-routing (intent parse + role dispatch) → inject task_plan.md header (head -50) + recent progress.md (tail -20)
-PreToolUse       → prepend active plan phase snippet from task_plan.md
-PostToolUse      → remind: "Update progress.md — 2-action rule. Action count: [N]"
-Stop             → run crystallization-tracker.py --dashboard; run check-complete.py; prompt /retro if milestone complete; log Uplift% to .agents/knowledge/self-improvement/
+- **UserPromptSubmit**: `/skill-routing` (intent parse + role dispatch) → inject `task_plan.md` header (head -50) + recent `progress.md` (tail -20)
+- **PreToolUse**: Prepend active plan phase snippet from `task_plan.md`
+- **PostToolUse**: Remind: "Update `progress.md` — 2-action rule. Action count: [N]"
+- **Stop**: Run `crystallization-tracker.py --dashboard`; run `check-complete.py`; prompt `/retro` if milestone complete; log Uplift% to `.agents/knowledge/self-improvement/`
 
 ---
 
