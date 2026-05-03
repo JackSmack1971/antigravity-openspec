@@ -59,52 +59,54 @@ NEVER load >3 full skill payloads simultaneously (Rule 04).
 ---
 
 ## REGISTERED WORKFLOWS
-/autoplan        → .agents/workflows/sprint/autoplan.md
-/spec            → .agents/workflows/sprint/spec.md
-/review          → .agents/workflows/sprint/review.md
-/ship            → .agents/workflows/sprint/ship.md
-/retro           → .agents/workflows/sprint/retro.md
-/sprint          → .agents/workflows/sprint/sprint.md
-/skill-routing   → .agents/workflows/sprint/skill-routing.md
-/ce-plan         → .agents/workflows/engineering/ce-plan.md
-/ce-debug        → .agents/workflows/engineering/ce-debug.md
-/ce-code-review  → .agents/workflows/engineering/ce-code-review.md
-/ce-compound     → .agents/workflows/engineering/ce-compound.md
-/systematic-debugging → .agents/workflows/engineering/ce-debug.md
-/using-git-worktrees  → (auto-triggered post design-approval; see Rule 04)
-/opsx:propose    → .agents/workflows/openspec/opsx-propose.md
-/security-threat-modeling-pipeline → .agents/workflows/security/threat-model-pipeline.md
-/discover        → .agents/workflows/pm/discover.md
-/writing-skills  → .agents/workflows/meta/writing-skills.md
-/dev-lifecycle   → .agents/workflows/engineering/development-lifecycle.md
-/sdd             → .agents/workflows/engineering/spec-driven-development.md
-/orchestrate     → .agents/workflows/engineering/skill-orchestration.md
-/core-loop        → .agents/workflows/browser/core-loop.md
-/quickstart-batch → .agents/workflows/browser/quickstart-batch.md
-/login            → .agents/workflows/browser/login.md
-/state-persist    → .agents/workflows/browser/state-persist.md
-/specialized-load → .agents/workflows/browser/specialized-load.md
-/open             → .agents/workflows/sprint/autoplan.md
-/qa               → .agents/workflows/sprint/review.md
-/ce-strategy      → .agents/workflows/engineering/ce-strategy.md
-/ce-brainstorm    → .agents/workflows/engineering/ce-brainstorm.md
-/ce-work          → .agents/workflows/engineering/ce-work.md
-/opsx:apply       → .agents/workflows/openspec/opsx-propose.md
-/opsx:sync        → .agents/workflows/openspec/opsx-propose.md
-/opsx:archive     → .agents/workflows/openspec/opsx-propose.md
-/opsx:new         → .agents/workflows/openspec/opsx-expanded.md
-/opsx:continue    → .agents/workflows/openspec/opsx-expanded.md
-/opsx:ff          → .agents/workflows/openspec/opsx-expanded.md
-/opsx:verify      → .agents/workflows/openspec/opsx-expanded.md
-/opsx:bulk-archive → .agents/workflows/openspec/opsx-expanded.md
-/opsx:explore     → .agents/workflows/openspec/opsx-expanded.md
-/office-hours     → .agents/workflows/sprint/autoplan.md
-/codex            → .agents/workflows/engineering/ce-code-review.md
-/browse           → .agents/workflows/sprint/review.md
-/careful          → .agents/workflows/sprint/ship.md
-/guard            → .agents/workflows/sprint/ship.md
-/freeze           → .agents/workflows/sprint/ship.md
-/restore-context  → .agents/workflows/meta/restore-context.md
+| Command | Path |
+|---|---|
+| /autoplan | .agents/workflows/sprint/autoplan.md |
+| /spec | .agents/workflows/sprint/spec.md |
+| /review | .agents/workflows/sprint/review.md |
+| /ship | .agents/workflows/sprint/ship.md |
+| /retro | .agents/workflows/sprint/retro.md |
+| /sprint | .agents/workflows/sprint/sprint.md |
+| /skill-routing | .agents/workflows/sprint/skill-routing.md |
+| /ce-plan | .agents/workflows/engineering/ce-plan.md |
+| /ce-debug | .agents/workflows/engineering/ce-debug.md |
+| /ce-code-review | .agents/workflows/engineering/ce-code-review.md |
+| /ce-compound | .agents/workflows/engineering/ce-compound.md |
+| /systematic-debugging | .agents/workflows/engineering/ce-debug.md |
+| /using-git-worktrees | (auto-triggered post design-approval; see Rule 04) |
+| /opsx:propose | .agents/workflows/openspec/opsx-propose.md |
+| /security-threat-modeling-pipeline | .agents/workflows/security/threat-model-pipeline.md |
+| /discover | .agents/workflows/pm/discover.md |
+| /writing-skills | .agents/workflows/meta/writing-skills.md |
+| /dev-lifecycle | .agents/workflows/engineering/development-lifecycle.md |
+| /sdd | .agents/workflows/engineering/spec-driven-development.md |
+| /orchestrate | .agents/workflows/engineering/skill-orchestration.md |
+| /core-loop | .agents/workflows/browser/core-loop.md |
+| /quickstart-batch | .agents/workflows/browser/quickstart-batch.md |
+| /login | .agents/workflows/browser/login.md |
+| /state-persist | .agents/workflows/browser/state-persist.md |
+| /specialized-load | .agents/workflows/browser/specialized-load.md |
+| /open | .agents/workflows/sprint/autoplan.md |
+| /qa | .agents/workflows/sprint/review.md |
+| /ce-strategy | .agents/workflows/engineering/ce-strategy.md |
+| /ce-brainstorm | .agents/workflows/engineering/ce-brainstorm.md |
+| /ce-work | .agents/workflows/engineering/ce-work.md |
+| /opsx:apply | .agents/workflows/openspec/opsx-propose.md |
+| /opsx:sync | .agents/workflows/openspec/opsx-propose.md |
+| /opsx:archive | .agents/workflows/openspec/opsx-propose.md |
+| /opsx:new | .agents/workflows/openspec/opsx-expanded.md |
+| /opsx:continue | .agents/workflows/openspec/opsx-expanded.md |
+| /opsx:ff | .agents/workflows/openspec/opsx-expanded.md |
+| /opsx:verify | .agents/workflows/openspec/opsx-expanded.md |
+| /opsx:bulk-archive | .agents/workflows/openspec/opsx-expanded.md |
+| /opsx:explore | .agents/workflows/openspec/opsx-expanded.md |
+| /office-hours | .agents/workflows/sprint/autoplan.md |
+| /codex | .agents/workflows/engineering/ce-code-review.md |
+| /browse | .agents/workflows/sprint/review.md |
+| /careful | .agents/workflows/sprint/ship.md |
+| /guard | .agents/workflows/sprint/ship.md |
+| /freeze | .agents/workflows/sprint/ship.md |
+| /restore-context | .agents/workflows/meta/restore-context.md |
 
 ---
 
