@@ -1,5 +1,15 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - AGENTS.md Master Router v2026-05-full
+### Changed
+- Registered 22 additional slash commands (`/open`, `/qa`, `/ce-strategy`, `/ce-brainstorm`, `/ce-work`, `/opsx:apply`, `/opsx:sync`, `/opsx:archive`, `/opsx:new`, `/opsx:continue`, `/opsx:ff`, `/opsx:verify`, `/opsx:bulk-archive`, `/opsx:explore`, `/office-hours`, `/codex`, `/browse`, `/careful`, `/guard`, `/freeze`, `/discover` alias, `/restore-context`) in REGISTERED WORKFLOWS.
+- Enhanced `Stop` lifecycle hook: added `--dashboard` flag to `crystallization-tracker.py`, conditional `/retro` prompt on milestone complete, and Uplift% logging directive to `.agents/knowledge/self-improvement/`.
+- GOLDEN RULE applied to IMMUTABLE RULES: `@.agents/rules/01–07` already present (00–12 registered); no duplicate entries added.
+
+### Added
+- **POWER-CHAINS (auto-fire)** section after SELF-IMPROVEMENT TERMINUS: Chains A–F with full workflow sequences (distinct from existing Governance Triads table which is more mature and retained).
+- **SKILL REGISTRY** section (27 entries): Layer 1 metadata index mapping skill paths to descriptions across governance, execution, review-qa-security, orchestration, meta-ki, and gstack categories.
+
 ## [2026-05-03] - Governance Audit: Full 13-Rule Set Verified (v2026-05-rules-audit)
 ### Verified (GOLDEN RULE — no overwrites)
 - Audited `.agents/rules/` — all 13 rule files (00–12) confirmed present and more mature than spec.
