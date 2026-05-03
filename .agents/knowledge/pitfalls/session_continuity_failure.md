@@ -1,7 +1,7 @@
 ---
 name: session-continuity-failure
 description: Pitfall KI for repeated bootstrapping — when each new session re-discovers the same framework improvements instead of compounding on previous work.
-version: 1.0.0
+version: 1.1.0
 ---
 # Pitfall: Session Continuity Failure (Repeated Bootstrapping)
 

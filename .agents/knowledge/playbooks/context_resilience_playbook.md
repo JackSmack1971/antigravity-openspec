@@ -1,7 +1,7 @@
 ---
 name: context-resilience-playbook
 description: Playbook for Rule 12 (Context Resilience) and Rule 10 (Context Budget Governance) to prevent context rot and hallucination.
-version: 1.0.0
+version: 1.1.0
 ---
 # Context Resilience Playbook (Power-Chain F)
 
@@ -30,7 +30,15 @@ Active monitoring of the session state is mandatory. Trigger the **Consolidation
 If the **3-Strike Tool Strike** is imminent:
 - **Strike 1**: Log the failure and verify the path (Rule 11.5).
 - **Strike 2**: Stop. Re-read the core rule and the target file content using `view_file` (Context Anchor).
-- **Strike 3 (HALT)**: Trigger a `STRIKE_THREE_HALT`. Issue a report to the user summarizing the blockage and recommended manual reset.
+- **Strike 3 (HALT)**: Trigger a `STRIKE_THREE_HALT`. Output the report structure defined below.
+
+### 🛑 STRIKE_THREE_HALT Report Structure
+When a circuit breaker is triggered, output this report for manual user reset:
+- **Target Action**: [What tool/action was being attempted?]
+- **Error Pattern**: [The recurring error message.]
+- **Attempt History**: [1. Action -> Error, 2. Action -> Error, 3. Action -> Error]
+- **Root Cause Hypothesis**: [Concise explanation of the blockage.]
+- **Manual Reset Instructions**: [Concrete technical steps the user must take.]
 
 ## 4. JIT Skill Management
 - Maintain the **3-Skill Cap**.

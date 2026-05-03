@@ -1,5 +1,21 @@
 # APEX Framework Changelog
 
+## [2026-05-03] - Bi-Weekly KI Audit Complete
+
+### Changed
+- `context_resilience_playbook.md` (v1.1.0): Absorbed circuit breaker reporting template.
+- `ki_lifecycle.md` (v1.1.0): Absorbed pitfall extraction structure.
+- `session_continuity_failure.md` (v1.1.0): Verified and bumped version.
+- `ANTIGRAVITY-KB.md` (v1.1.0): Rewritten to reflect consolidated structure.
+
+### Removed
+- `circuit_breaker_reporting.md` (redundant)
+- `pitfall_extraction.md` (redundant)
+
+### Metrics
+- Total active KIs: 10 (optimized from 12)
+- Conflict density: 0.0
+
 ## [2026-05-03] - Compound Cycle Complete
 
 ### Changed
