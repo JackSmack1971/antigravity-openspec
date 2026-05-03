@@ -19,8 +19,9 @@ Agent MUST NOT skip phases or merge checkpoints under time pressure.
 - User invokes `/autoplan` explicitly
 
 ## Prerequisite
-- `SPEC.md` does NOT yet exist for this feature (if it does, start at Step 3)
-- `task_plan.md` initialized (see Rule 02)
+- If `SPEC.md` exists, verify it against `STRATEGY.md` (Step 1) before proceeding.
+- `task_plan.md` initialized (see Rule 02).
+- If a new project is requested, ensure `using-git-worktrees` (Step 8) handles initialization.
 
 ## Workflow Steps
 
@@ -42,7 +43,7 @@ Generate a formal feature proposal based on the diagnostic.
 3. Save to repo root.
 > **User Sovereignty Checkpoint #3**: Human MUST approve SPEC.md. HALT until approved.
 
-### Step 4 — Engineering Review
+### Step 5 — Engineering Review
 Pre-implementation technical deep-dive by eng persona.
 ```
 - Review SPEC.md for: technical feasibility, architecture decisions, data flow
@@ -50,7 +51,7 @@ Pre-implementation technical deep-dive by eng persona.
 - Output: eng review notes appended to findings.md
 ```
 
-### Step 5 — DX Review
+### Step 6 — DX Review
 Developer experience validation of API surface, tooling, and docs.
 ```
 - Review proposed interfaces and commands for ergonomics
@@ -58,15 +59,15 @@ Developer experience validation of API surface, tooling, and docs.
 - Output: DX notes appended to findings.md
 ```
 
-### Step 5 — Engineering Plan (`/ce-plan`)
+### Step 7 — Engineering Plan (`/ce-plan`)
 Invoke `/ce-plan` to generate `docs/plans/<feature>.md`.
 > **User Sovereignty Checkpoint #4**: HALT until eng plan is approved.
 
-### Step 6 — Worktree Setup (`/using-git-worktrees`)
+### Step 8 — Worktree Setup (`/using-git-worktrees`)
 Auto-trigger `/using-git-worktrees` to create an isolated development branch and workspace.
-Log: "Plan complete. Branch ready. Awaiting /build or /ship trigger."
+Log: "Plan complete. Branch ready. Awaiting implementation."
 
-### Step 7 — Code Review (`/ce-code-review`)
+### Step 9 — Code Review (`/ce-code-review`)
 3-persona parallel quality gate.
 ```
 Invoke /ce-code-review:
@@ -77,7 +78,7 @@ Invoke /ce-code-review:
 - All PASS (≥85 confidence) → proceed
 ```
 
-### Step 8 — PR Review (`/review`)
+### Step 10 — PR Review (`/review`)
 ```
 Invoke /review:
 - Detect branch/plan
@@ -85,15 +86,15 @@ Invoke /review:
 - Specialist dispatch (parallel) → fix-first → verification
 ```
 
-### Step 9 — QA (`/qa`)
+### Step 11 — QA (`/qa`)
 ```
 - Run full test suite
 - Validate acceptance criteria from SPEC.md
 - Confirm no regressions
 ```
-> **User Sovereignty Checkpoint #4**: QA sign-off required before ship.
+> **User Sovereignty Checkpoint #5**: QA sign-off required before ship.
 
-### Step 10 — Ship (`/ship`)
+### Step 12 — Ship (`/ship`)
 ```
 Invoke /ship:
 - Run tests + /guard safety check
@@ -101,7 +102,7 @@ Invoke /ship:
 - /land-and-deploy (if applicable)
 ```
 
-### Step 11 — Retro (`/retro`)
+### Step 13 — Retro (`/retro`)
 ```
 Invoke /retro (MANDATORY — Rule 05 enforces this):
 - Extract KI deltas (Pitfall | Playbook | Context | Reference)

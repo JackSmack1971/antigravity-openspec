@@ -15,7 +15,9 @@ Triggered automatically after the design approval phase to guarantee a clean, is
    - Check `.gitignore` for proper exclusion of worktree directories if they are placed inside the repo (though sibling directories are preferred).
    - Auto-fix the `.gitignore` if necessary.
    - Commit any `.gitignore` fixes.
-4. **Project Name Detection:** Retrieve the project name by querying the git repository root (`git rev-parse --show-toplevel`).
+4. **Project Name Detection & Git Safety:**
+   - Query git repository root (`git rev-parse --show-toplevel`).
+   - If `git rev-parse` fails (not a repo), execute `git init`, create a skeleton `.gitignore`, and make an initial commit.
 5. **Create Worktree:** Execute `git worktree add -b <new-branch> <path>` and navigate into the new branch directory.
 6. **Auto-Detect & Run Project Setup:** Detect dependency managers (e.g., `npm install`, `pip install -r requirements.txt`) and run them to bootstrap the new workspace.
 7. **Baseline Test Run & Verification:** Execute the existing test suite to ensure the fresh worktree is fully functional before changes begin.
