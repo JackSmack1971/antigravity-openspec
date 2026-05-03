@@ -7,19 +7,20 @@ description: Single entry point. Loads Rules. Registers Workflows. Hardened for 
 # APEX — Autonomous Production Engineering eXcellence
 
 ## IMMUTABLE RULES (always-active, never override)
-@.agents/rules/00-constitution.md
-@.agents/rules/01-spec-before-code.md
-@.agents/rules/02-planning-memory.md
-@.agents/rules/03-security-baseline.md
-@.agents/rules/04-progressive-disclosure.md
-@.agents/rules/05-ki-governance.md
-@.agents/rules/06-terminal-execution.md
-@.agents/rules/07-visual-verification.md
-@.agents/rules/08-windows-host-bridge.md
-@.agents/rules/09-self-improvement-uplift.md
-@.agents/rules/10-context-budget-governance.md
-@.agents/rules/11-path-governance.md
-@.agents/rules/12-context-resilience.md
+- @.agents/rules/00-constitution.md
+- @.agents/rules/01-spec-before-code.md
+- @.agents/rules/02-planning-memory.md
+- @.agents/rules/03-security-baseline.md
+- @.agents/rules/04-progressive-disclosure.md
+- @.agents/rules/05-ki-governance.md
+- @.agents/rules/06-terminal-execution.md
+- @.agents/rules/07-visual-verification.md
+- @.agents/rules/08-windows-host-bridge.md
+- @.agents/rules/09-self-improvement-uplift.md
+- @.agents/rules/10-context-budget-governance.md
+- @.agents/rules/11-path-governance.md
+- @.agents/rules/12-context-resilience.md
+
 *L0 Foundational Rules (Karpathy Mandates) are natively embedded in 00-constitution.md.*
 
 
